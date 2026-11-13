@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
     const operation = await parseBuyerQueryToOperation(question, comparison);
 
     // 4. Execute deterministic math in TypeScript (never in LLM mind)
-    const mathResult = executeDeterministicMath(operation, rfx, comparison);
+    const mathResult = executeDeterministicMath(operation, rfx, comparison, vendors);
 
     // 5. Generate executive memo citing exact verified numbers
     const memo = await generateExecutiveMemo(mathResult, question);
@@ -73,7 +73,7 @@ export async function GET(req: NextRequest) {
     });
 
     const operation = await parseBuyerQueryToOperation(question, comparison);
-    const mathResult = executeDeterministicMath(operation, rfx, comparison);
+    const mathResult = executeDeterministicMath(operation, rfx, comparison, vendors);
     const memo = await generateExecutiveMemo(mathResult, question);
 
     return NextResponse.json({

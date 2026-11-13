@@ -1,474 +1,66 @@
 {
   "vendorId": "vendor5_gupta",
-  "name": "Gupta Carton Works, Jaipur",
+  "name": "Gupta Carton Works",
   "sourceFormat": "email",
   "sourceFileName": "gupta_email.txt",
   "currencyOriginal": "INR",
   "lineQuotes": [
     {
       "lineNo": 1,
-      "rawText": "₹38/kg for 3-ply | Tare wt: 0.12 kg",
+      "rawText": "3-ply Plain Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 38,
       "uomOriginal": "per_kg",
       "coverage": "quoted",
-      "confidence": 0.82,
+      "confidence": 1,
       "source": {
         "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
+        "locationHint": "email body",
+        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply."
       }
     },
     {
       "lineNo": 2,
-      "rawText": "₹38/kg for 3-ply (+ ₹10/box print plate charge) | Tare wt: 0.12 kg",
+      "rawText": "3-ply Printed Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 38,
       "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
+      "coverage": "ambiguous",
+      "confidence": 0.9,
       "source": {
         "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      },
-      "notes": "Includes +₹10 printing plate surcharge"
+        "locationHint": "email body",
+        "snippet": "Printed ones add 10 per box for the plate."
+      }
     },
     {
       "lineNo": 3,
-      "rawText": "₹38/kg for 3-ply | Tare wt: 0.22 kg",
+      "rawText": "3-ply Plain Corrugated Box M (310x220x150mm)",
       "unitPriceOriginal": 38,
       "uomOriginal": "per_kg",
       "coverage": "quoted",
-      "confidence": 0.82,
+      "confidence": 1,
       "source": {
         "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
+        "locationHint": "email body",
+        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply."
       }
     },
     {
       "lineNo": 4,
-      "rawText": "₹38/kg for 3-ply (+ ₹10/box print plate charge) | Tare wt: 0.22 kg",
+      "rawText": "3-ply Printed Corrugated Box M (310x220x150mm)",
       "unitPriceOriginal": 38,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      },
-      "notes": "Includes +₹10 printing plate surcharge"
-    },
-    {
-      "lineNo": 5,
-      "rawText": "₹38/kg for 3-ply | Tare wt: 0.38 kg",
-      "unitPriceOriginal": 38,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      }
-    },
-    {
-      "lineNo": 6,
-      "rawText": "₹38/kg for 3-ply (+ ₹10/box print plate charge) | Tare wt: 0.38 kg",
-      "unitPriceOriginal": 38,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      },
-      "notes": "Includes +₹10 printing plate surcharge"
-    },
-    {
-      "lineNo": 7,
-      "rawText": "₹38/kg for 3-ply | Tare wt: 0.55 kg",
-      "unitPriceOriginal": 38,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      }
-    },
-    {
-      "lineNo": 8,
-      "rawText": "₹38/kg for 3-ply (+ ₹10/box print plate charge) | Tare wt: 0.55 kg",
-      "unitPriceOriginal": 38,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      },
-      "notes": "Includes +₹10 printing plate surcharge"
-    },
-    {
-      "lineNo": 9,
-      "rawText": "₹42/kg for 5-ply | Tare wt: 0.12 kg",
-      "unitPriceOriginal": 42,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      }
-    },
-    {
-      "lineNo": 10,
-      "rawText": "₹42/kg for 5-ply (+ ₹10/box print plate charge) | Tare wt: 0.12 kg",
-      "unitPriceOriginal": 42,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      },
-      "notes": "Includes +₹10 printing plate surcharge"
-    },
-    {
-      "lineNo": 11,
-      "rawText": "₹42/kg for 5-ply | Tare wt: 0.22 kg",
-      "unitPriceOriginal": 42,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      }
-    },
-    {
-      "lineNo": 12,
-      "rawText": "₹42/kg for 5-ply (+ ₹10/box print plate charge) | Tare wt: 0.22 kg",
-      "unitPriceOriginal": 42,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      },
-      "notes": "Includes +₹10 printing plate surcharge"
-    },
-    {
-      "lineNo": 13,
-      "rawText": "₹42/kg for 5-ply | Tare wt: 0.38 kg",
-      "unitPriceOriginal": 42,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      }
-    },
-    {
-      "lineNo": 14,
-      "rawText": "₹42/kg for 5-ply (+ ₹10/box print plate charge) | Tare wt: 0.38 kg",
-      "unitPriceOriginal": 42,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      },
-      "notes": "Includes +₹10 printing plate surcharge"
-    },
-    {
-      "lineNo": 15,
-      "rawText": "₹42/kg for 5-ply | Tare wt: 0.55 kg",
-      "unitPriceOriginal": 42,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      }
-    },
-    {
-      "lineNo": 16,
-      "rawText": "₹42/kg for 5-ply (+ ₹10/box print plate charge) | Tare wt: 0.55 kg",
-      "unitPriceOriginal": 42,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      },
-      "notes": "Includes +₹10 printing plate surcharge"
-    },
-    {
-      "lineNo": 17,
-      "rawText": "₹47/kg for 7-ply | Tare wt: 0.12 kg",
-      "unitPriceOriginal": 47,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      }
-    },
-    {
-      "lineNo": 18,
-      "rawText": "₹47/kg for 7-ply (+ ₹10/box print plate charge) | Tare wt: 0.12 kg",
-      "unitPriceOriginal": 47,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      },
-      "notes": "Includes +₹10 printing plate surcharge"
-    },
-    {
-      "lineNo": 19,
-      "rawText": "₹47/kg for 7-ply | Tare wt: 0.22 kg",
-      "unitPriceOriginal": 47,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      }
-    },
-    {
-      "lineNo": 20,
-      "rawText": "₹47/kg for 7-ply (+ ₹10/box print plate charge) | Tare wt: 0.22 kg",
-      "unitPriceOriginal": 47,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      },
-      "notes": "Includes +₹10 printing plate surcharge"
-    },
-    {
-      "lineNo": 21,
-      "rawText": "₹47/kg for 7-ply | Tare wt: 0.38 kg",
-      "unitPriceOriginal": 47,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      }
-    },
-    {
-      "lineNo": 22,
-      "rawText": "₹47/kg for 7-ply (+ ₹10/box print plate charge) | Tare wt: 0.38 kg",
-      "unitPriceOriginal": 47,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      },
-      "notes": "Includes +₹10 printing plate surcharge"
-    },
-    {
-      "lineNo": 23,
-      "rawText": "₹47/kg for 7-ply | Tare wt: 0.55 kg",
-      "unitPriceOriginal": 47,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      }
-    },
-    {
-      "lineNo": 24,
-      "rawText": "₹47/kg for 7-ply (+ ₹10/box print plate charge) | Tare wt: 0.55 kg",
-      "unitPriceOriginal": 47,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      },
-      "notes": "Includes +₹10 printing plate surcharge"
-    },
-    {
-      "lineNo": 25,
-      "rawText": "Line 25 (9-ply Heavy Duty Bulk Cargo Box (800x600x500mm)): Unspecified specialty packaging in email quote",
-      "unitPriceOriginal": null,
       "uomOriginal": "per_kg",
       "coverage": "ambiguous",
-      "confidence": 0.4,
+      "confidence": 0.9,
       "source": {
         "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      },
-      "notes": "Unspecified size/ply in email quote"
-    },
-    {
-      "lineNo": 26,
-      "rawText": "₹38/kg for 3-ply | Tare wt: 0.09 kg",
-      "unitPriceOriginal": 38,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      }
-    },
-    {
-      "lineNo": 27,
-      "rawText": "₹38/kg for 3-ply | Tare wt: 0.16 kg",
-      "unitPriceOriginal": 38,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      }
-    },
-    {
-      "lineNo": 28,
-      "rawText": "₹38/kg for 3-ply | Tare wt: 0.28 kg",
-      "unitPriceOriginal": 38,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      }
-    },
-    {
-      "lineNo": 29,
-      "rawText": "₹38/kg for 3-ply | Tare wt: 0.15 kg",
-      "unitPriceOriginal": 38,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
-      }
-    },
-    {
-      "lineNo": 30,
-      "rawText": "₹42/kg for 5-ply | Tare wt: 0.85 kg",
-      "unitPriceOriginal": 42,
-      "uomOriginal": "per_kg",
-      "coverage": "quoted",
-      "confidence": 0.82,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Paragraph 1",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply. Printed ones add 10 per box for the plate."
+        "locationHint": "email body",
+        "snippet": "Printed ones add 10 per box for the plate."
       }
     }
   ],
-  "questionnaireAnswers": [
-    {
-      "qId": "q1",
-      "questionText": "ISO 9001:2015 certified?",
-      "answer": null,
-      "confidence": 0,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body",
-        "snippet": "Not mentioned in email quote"
-      }
-    },
-    {
-      "qId": "q2",
-      "questionText": "Standard payment terms",
-      "answer": 30,
-      "confidence": 0.95,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Line 2",
-        "snippet": "payment 30 days."
-      }
-    },
-    {
-      "qId": "q3",
-      "questionText": "Lead time",
-      "answer": 14,
-      "confidence": 0.95,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body Line 3",
-        "snippet": "Lead time 2 weeks."
-      }
-    },
-    {
-      "qId": "q4",
-      "questionText": "Recycled fibre content (%)?",
-      "answer": null,
-      "confidence": 0,
-      "source": {
-        "doc": "gupta_email.txt",
-        "locationHint": "Email Body",
-        "snippet": "Not mentioned in email"
-      }
-    }
-  ],
-  "terms": {
-    "freight": "Freight extra",
-    "paymentDays": 30,
-    "leadTimeDays": 14,
-    "discountNote": "Printed ones add ₹10/box for the plate",
-    "volumeDiscountPercent": 0,
-    "volumeDiscountThresholdQty": 0
-  },
-  "flags": [
-    "unstructured_email",
-    "priced_per_kg",
-    "freight_extra",
-    "q1_q4_unanswered"
-  ],
-  "overallConfidence": 0.75,
-  "extractedAt": "2026-11-13T11:18:36.365Z"
+  "questionnaireAnswers": [],
+  "terms": {},
+  "flags": [],
+  "overallConfidence": 0.9,
+  "extractedAt": "2026-11-13T13:46:27.284Z"
 }

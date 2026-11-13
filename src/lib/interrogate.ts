@@ -1,4 +1,4 @@
-import { RFx, Comparison, ComparisonRow, ComparisonCell } from '@/types/schema';
+import { RFx, Comparison, ComparisonRow, ComparisonCell, VendorResponse } from '@/types/schema';
 import { callLLMText } from './llm';
 import { cleanJsonText } from './extraction';
 
@@ -131,14 +131,16 @@ Return JSON matching this schema:
 export function executeDeterministicMath(
   op: InterrogateOperation,
   rfx: RFx,
-  comparison: Comparison
+  comparison: Comparison,
+  vendorResponses: VendorResponse[] = []
 ): MathExecutionResult {
   // 1. Identify eligible vendors based on compliance & vendor filters
   const eligibleVendors: string[] = [];
   const ineligibleVendors: { vendorId: string; reason: string }[] = [];
 
+  const responsesById = new Map(vendorResponses.map(r => [r.vendorId, r]));
+
   comparison.vendors.forEach(v => {
-    // Check vendor ID filter
     if (op.filters.vendorIds && op.filters.vendorIds.length > 0) {
       if (!op.filters.vendorIds.includes(v.vendorId)) {
         ineligibleVendors.push({ vendorId: v.vendorId, reason: 'Excluded by vendor filter' });
@@ -146,19 +148,46 @@ export function executeDeterministicMath(
       }
     }
 
-    // Check ISO requirement
+    const resp = responsesById.get(v.vendorId);
+    const answers = resp?.questionnaireAnswers || [];
+    const getAnswer = (qId: string) =>
+      answers.find(a => (a as any).qId === qId || (a as any).questionId === qId || a.qId?.startsWith(qId) || (qId.startsWith(a.qId) && a.qId.length > 0))?.answer;
+
     if (op.filters.isoRequired) {
-      // Gupta does not have ISO, Rajdhani/Shakti/Everest/Metro have ISO
-      if (v.vendorId === 'vendor5_gupta') {
-        ineligibleVendors.push({ vendorId: v.vendorId, reason: 'Failed ISO 9001:2015 certification requirement' });
+      const iso = getAnswer('q1') ?? getAnswer('q1_iso');
+      const isoPass = iso === true || (typeof iso === 'string' && /yes|certified|iso\s*9001/i.test(iso));
+      if (!isoPass) {
+        ineligibleVendors.push({ vendorId: v.vendorId, reason: 'Not ISO 9001:2015 certified (per extracted response)' });
         return;
       }
     }
 
-    // Check recycled content requirement
-    if (op.filters.minRecycledPercent) {
-      if (v.vendorId === 'vendor4_rajdhani' || v.vendorId === 'vendor5_gupta') {
-        ineligibleVendors.push({ vendorId: v.vendorId, reason: 'Failed minimum recycled fibre requirement' });
+    if (typeof op.filters.minRecycledPercent === 'number' && op.filters.minRecycledPercent > 0) {
+      const rec = getAnswer('q4') ?? getAnswer('q4_recycled_content');
+      let recPct = 0;
+      if (typeof rec === 'number') recPct = rec;
+      else if (typeof rec === 'string') {
+        const m = rec.match(/(\d+(\.\d+)?)/);
+        if (m) recPct = parseFloat(m[1]);
+      }
+      if (recPct < op.filters.minRecycledPercent) {
+        ineligibleVendors.push({ vendorId: v.vendorId, reason: `Recycled content ${recPct}% < required ${op.filters.minRecycledPercent}%` });
+        return;
+      }
+    }
+
+    if (typeof op.filters.minPaymentDays === 'number' && op.filters.minPaymentDays > 0) {
+      const days = resp?.terms?.paymentDays ?? 0;
+      if (days < op.filters.minPaymentDays) {
+        ineligibleVendors.push({ vendorId: v.vendorId, reason: `Payment days (${days}d) below required ${op.filters.minPaymentDays}d` });
+        return;
+      }
+    }
+
+    if (typeof op.filters.maxLeadTimeDays === 'number' && op.filters.maxLeadTimeDays > 0) {
+      const lead = resp?.terms?.leadTimeDays ?? Infinity;
+      if (lead > op.filters.maxLeadTimeDays) {
+        ineligibleVendors.push({ vendorId: v.vendorId, reason: `Lead time (${lead}d) exceeds maximum ${op.filters.maxLeadTimeDays}d` });
         return;
       }
     }

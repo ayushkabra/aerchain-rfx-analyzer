@@ -89,7 +89,6 @@ export function normalizeVendorQuotes(
 
       // UOM conversion to INR per box
       let unitPriceNormalized = rateInINR;
-      const isPrinted = lineItem.description.toLowerCase().includes('printed');
 
       if (uom === 'box' || uom === 'piece' || uom === 'pc' || uom === 'nos') {
         unitPriceNormalized = rateInINR;
@@ -97,13 +96,9 @@ export function normalizeVendorQuotes(
         unitPriceNormalized = rateInINR / 100;
         assumptions.push(`UOM conversion: ₹${rateInINR.toFixed(2)} / 100 nos = ₹${unitPriceNormalized.toFixed(2)}/box`);
       } else if (uom === 'per_kg' || uom === 'kg') {
-        const baseBoxRate = rateInINR * lineItem.weight_kg_per_box;
-        const printSurcharge = isPrinted ? 10.0 : 0.0;
-        unitPriceNormalized = baseBoxRate + printSurcharge;
+        unitPriceNormalized = rateInINR * lineItem.weight_kg_per_box;
         assumptions.push(
-          `Weight conversion: ₹${rateInINR.toFixed(2)}/kg × ${lineItem.weight_kg_per_box} kg/box` +
-          (isPrinted ? ' + ₹10.00 print plate surcharge' : '') +
-          ` = ₹${unitPriceNormalized.toFixed(2)}/box`
+          `Weight conversion: ₹${rateInINR.toFixed(2)}/kg × ${lineItem.weight_kg_per_box} kg/box = ₹${unitPriceNormalized.toFixed(2)}/box`
         );
       } else {
         coverage = 'ambiguous';

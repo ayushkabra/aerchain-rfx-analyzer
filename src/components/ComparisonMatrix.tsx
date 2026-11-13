@@ -132,7 +132,7 @@ export function ComparisonMatrix() {
       <div className="py-24 text-center space-y-4">
         <div className="w-10 h-10 border-4 border-orange-500/20 border-t-orange-500 rounded-full animate-spin mx-auto" />
         <p className="text-sm text-slate-400 font-mono">
-          Normalizing vendor quotes across 30 lines (USD→INR, UOM ÷100, Tare Wt × kg)...
+          Normalizing vendor quotes across RFx lines (USD→INR, UOM ÷100, Tare Wt × kg)...
         </p>
       </div>
     );
@@ -321,7 +321,7 @@ export function ComparisonMatrix() {
                       <div className="text-[11px] text-emerald-400 font-mono font-semibold mt-0.5">
                         ₹{(vendor.totalSpendINR / 100000).toFixed(2)}L
                         <span className="text-slate-500 font-normal text-[10px] ml-1">
-                          ({vendor.linesQuoted}/30 lines)
+                          ({vendor.linesQuoted}/{vendor.linesTotal} lines)
                         </span>
                       </div>
                       <div className="text-[10px] text-slate-500 mt-0.5">

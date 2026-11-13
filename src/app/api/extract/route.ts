@@ -7,6 +7,17 @@ import { VendorResponse } from '@/types/schema';
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const vendorId = searchParams.get('vendorId') || 'vendor1_shakti';
+  const forceLive = searchParams.get('forceLive') === 'true';
+
+  if (forceLive) {
+    try {
+      const rfx = getCanonicalRFx();
+      const response = await getSingleVendor(vendorId, rfx, true);
+      return NextResponse.json({ success: true, data: response });
+    } catch (e: any) {
+      return NextResponse.json({ success: false, error: e.message, stack: e.stack }, { status: 500 });
+    }
+  }
 
   if (vendorId === 'all') {
     const responses: Record<string, VendorResponse | null> = {};

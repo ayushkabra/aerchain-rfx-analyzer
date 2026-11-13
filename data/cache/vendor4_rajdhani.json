@@ -1,638 +1,455 @@
 {
   "vendorId": "vendor4_rajdhani",
-  "name": "Rajdhani Boards & Cartons",
+  "name": "Rajdhani Boards",
   "sourceFormat": "photo",
   "sourceFileName": "vendor4_rajdhani_ratecard_photo.jpg",
   "currencyOriginal": "INR",
   "lineQuotes": [
     {
       "lineNo": 1,
-      "rawText": "Ln 1 3-ply Plain Corrugated Box S (230x160x100mm) -> Rate: ₹8",
+      "rawText": "3-ply Plain Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 8,
       "uomOriginal": "box",
-      "unitPriceNormalized": 8,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 1 (Crisp text)",
-        "snippet": "Ln 1\t3-ply Plain Corrugated Box S (230x160x100mm)\t8",
-        "boundingBox": {
-          "top": 174,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "8"
       }
     },
     {
       "lineNo": 2,
-      "rawText": "Ln 2 3-ply Printed Corrugated Box S (230x160x100mm) -> Rate: ₹18",
+      "rawText": "3-ply Printed Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 18,
       "uomOriginal": "box",
-      "unitPriceNormalized": 18,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 2 (Crisp text)",
-        "snippet": "Ln 2\t3-ply Printed Corrugated Box S (230x160x100mm)\t18",
-        "boundingBox": {
-          "top": 198,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "18"
       }
     },
     {
       "lineNo": 3,
-      "rawText": "Ln 3 3-ply Plain Corrugated Box M (310x220x150mm) -> Rate: ₹12",
+      "rawText": "3-ply Plain Corrugated Box M (310x220x150mm)",
       "unitPriceOriginal": 12,
       "uomOriginal": "box",
-      "unitPriceNormalized": 12,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 3 (Crisp text)",
-        "snippet": "Ln 3\t3-ply Plain Corrugated Box M (310x220x150mm)\t12",
-        "boundingBox": {
-          "top": 222,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "12"
       }
     },
     {
       "lineNo": 4,
-      "rawText": "Ln 4 3-ply Printed Corrugated Box M (310x220x150mm) -> Rate: ₹23",
+      "rawText": "3-ply Printed Corrugated Box M (310x220x150mm)",
       "unitPriceOriginal": 23,
       "uomOriginal": "box",
-      "unitPriceNormalized": 23,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 4 (Crisp text)",
-        "snippet": "Ln 4\t3-ply Printed Corrugated Box M (310x220x150mm)\t23",
-        "boundingBox": {
-          "top": 246,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "23"
       }
     },
     {
       "lineNo": 5,
-      "rawText": "Ln 5 3-ply Plain Corrugated Box L (400x300x200mm) -> Rate: ₹23",
+      "rawText": "3-ply Plain Corrugated Box L (400x300x200mm)",
       "unitPriceOriginal": 23,
       "uomOriginal": "box",
-      "unitPriceNormalized": 23,
       "coverage": "quoted",
-      "confidence": 0.52,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 5 (Low-contrast faint ink)",
-        "snippet": "Ln 5\t3-ply Plain Corrugated Box L (400x300x200mm)\t23",
-        "boundingBox": {
-          "top": 270,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
-      },
-      "notes": "Faint ink / low-contrast in photograph — flagged for human review"
+        "locationHint": "top left",
+        "snippet": "23"
+      }
     },
     {
       "lineNo": 6,
-      "rawText": "Ln 6 3-ply Printed Corrugated Box L (400x300x200mm) -> Rate: ₹30",
+      "rawText": "3-ply Printed Corrugated Box L (400x300x200mm)",
       "unitPriceOriginal": 30,
       "uomOriginal": "box",
-      "unitPriceNormalized": 30,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 6 (Crisp text)",
-        "snippet": "Ln 6\t3-ply Printed Corrugated Box L (400x300x200mm)\t30",
-        "boundingBox": {
-          "top": 294,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "30"
       }
     },
     {
       "lineNo": 7,
-      "rawText": "Ln 7 3-ply Plain Corrugated Box XL (500x350x250mm) -> Rate: ₹31",
+      "rawText": "3-ply Plain Corrugated Box XL (500x350x250mm)",
       "unitPriceOriginal": 31,
       "uomOriginal": "box",
-      "unitPriceNormalized": 31,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 7 (Crisp text)",
-        "snippet": "Ln 7\t3-ply Plain Corrugated Box XL (500x350x250mm)\t31",
-        "boundingBox": {
-          "top": 318,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "31"
       }
     },
     {
       "lineNo": 8,
-      "rawText": "Ln 8 3-ply Printed Corrugated Box XL (500x350x250mm) -> Rate: ₹42",
+      "rawText": "3-ply Printed Corrugated Box XL (500x350x250mm)",
       "unitPriceOriginal": 42,
       "uomOriginal": "box",
-      "unitPriceNormalized": 42,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 8 (Crisp text)",
-        "snippet": "Ln 8\t3-ply Printed Corrugated Box XL (500x350x250mm)\t42",
-        "boundingBox": {
-          "top": 342,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "42"
       }
     },
     {
       "lineNo": 9,
-      "rawText": "Ln 9 5-ply Plain Corrugated Box S (230x160x100mm) -> Rate: ₹7",
+      "rawText": "5-ply Plain Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 7,
       "uomOriginal": "box",
-      "unitPriceNormalized": 7,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 9 (Crisp text)",
-        "snippet": "Ln 9\t5-ply Plain Corrugated Box S (230x160x100mm)\t7",
-        "boundingBox": {
-          "top": 366,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "7"
       }
     },
     {
       "lineNo": 10,
-      "rawText": "Ln 10 5-ply Printed Corrugated Box S (230x160x100mm) -> Rate: ₹19",
+      "rawText": "5-ply Printed Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 19,
       "uomOriginal": "box",
-      "unitPriceNormalized": 19,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 10 (Crisp text)",
-        "snippet": "Ln 10\t5-ply Printed Corrugated Box S (230x160x100mm)\t19",
-        "boundingBox": {
-          "top": 390,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "19"
       }
     },
     {
       "lineNo": 11,
-      "rawText": "Ln 11 5-ply Plain Corrugated Box M (310x220x150mm) -> Rate: ₹15",
+      "rawText": "5-ply Plain Corrugated Box M (310x220x150mm)",
       "unitPriceOriginal": 15,
       "uomOriginal": "box",
-      "unitPriceNormalized": 15,
       "coverage": "quoted",
-      "confidence": 0.52,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 11 (Low-contrast faint ink)",
-        "snippet": "Ln 11\t5-ply Plain Corrugated Box M (310x220x150mm)\t15",
-        "boundingBox": {
-          "top": 414,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
-      },
-      "notes": "Faint ink / low-contrast in photograph — flagged for human review"
+        "locationHint": "top left",
+        "snippet": "15"
+      }
     },
     {
       "lineNo": 12,
-      "rawText": "Ln 12 5-ply Printed Corrugated Box M (310x220x150mm) -> Rate: ₹25",
+      "rawText": "5-ply Printed Corrugated Box M (310x220x150mm)",
       "unitPriceOriginal": 25,
       "uomOriginal": "box",
-      "unitPriceNormalized": 25,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 12 (Crisp text)",
-        "snippet": "Ln 12\t5-ply Printed Corrugated Box M (310x220x150mm)\t25",
-        "boundingBox": {
-          "top": 438,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "25"
       }
     },
     {
       "lineNo": 13,
-      "rawText": "Ln 13 5-ply Plain Corrugated Box L (400x300x200mm) -> Rate: ₹24",
+      "rawText": "5-ply Plain Corrugated Box L (400x300x200mm)",
       "unitPriceOriginal": 24,
       "uomOriginal": "box",
-      "unitPriceNormalized": 24,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 13 (Crisp text)",
-        "snippet": "Ln 13\t5-ply Plain Corrugated Box L (400x300x200mm)\t24",
-        "boundingBox": {
-          "top": 462,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "24"
       }
     },
     {
       "lineNo": 14,
-      "rawText": "Ln 14 5-ply Printed Corrugated Box L (400x300x200mm) -> Rate: ₹36",
+      "rawText": "5-ply Printed Corrugated Box L (400x300x200mm)",
       "unitPriceOriginal": 36,
       "uomOriginal": "box",
-      "unitPriceNormalized": 36,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 14 (Crisp text)",
-        "snippet": "Ln 14\t5-ply Printed Corrugated Box L (400x300x200mm)\t36",
-        "boundingBox": {
-          "top": 486,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "36"
       }
     },
     {
       "lineNo": 15,
-      "rawText": "Ln 15 5-ply Plain Corrugated Box XL (500x350x250mm) -> Rate: ₹34",
+      "rawText": "5-ply Plain Corrugated Box XL (500x350x250mm)",
       "unitPriceOriginal": 34,
       "uomOriginal": "box",
-      "unitPriceNormalized": 34,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 15 (Crisp text)",
-        "snippet": "Ln 15\t5-ply Plain Corrugated Box XL (500x350x250mm)\t34",
-        "boundingBox": {
-          "top": 510,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "34"
       }
     },
     {
       "lineNo": 16,
-      "rawText": "Ln 16 5-ply Printed Corrugated Box XL (500x350x250mm) -> Rate: ₹44",
+      "rawText": "5-ply Printed Corrugated Box XL (500x350x250mm)",
       "unitPriceOriginal": 44,
       "uomOriginal": "box",
-      "unitPriceNormalized": 44,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 16 (Crisp text)",
-        "snippet": "Ln 16\t5-ply Printed Corrugated Box XL (500x350x250mm)\t44",
-        "boundingBox": {
-          "top": 534,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "44"
       }
     },
     {
       "lineNo": 17,
-      "rawText": "Ln 17 7-ply Plain Corrugated Box S (230x160x100mm) -> Rate: ₹10",
+      "rawText": "7-ply Plain Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 10,
       "uomOriginal": "box",
-      "unitPriceNormalized": 10,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 17 (Crisp text)",
-        "snippet": "Ln 17\t7-ply Plain Corrugated Box S (230x160x100mm)\t10",
-        "boundingBox": {
-          "top": 558,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "10"
       }
     },
     {
       "lineNo": 18,
-      "rawText": "Ln 18 7-ply Printed Corrugated Box S (230x160x100mm) -> Rate: ₹19",
+      "rawText": "7-ply Printed Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 19,
       "uomOriginal": "box",
-      "unitPriceNormalized": 19,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 18 (Crisp text)",
-        "snippet": "Ln 18\t7-ply Printed Corrugated Box S (230x160x100mm)\t19",
-        "boundingBox": {
-          "top": 582,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "19"
       }
     },
     {
       "lineNo": 19,
-      "rawText": "Ln 19 7-ply Plain Corrugated Box M (310x220x150mm) -> Rate: ₹18",
+      "rawText": "7-ply Plain Corrugated Box M (310x220x150mm)",
       "unitPriceOriginal": 18,
       "uomOriginal": "box",
-      "unitPriceNormalized": 18,
       "coverage": "quoted",
-      "confidence": 0.52,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 19 (Low-contrast faint ink)",
-        "snippet": "Ln 19\t7-ply Plain Corrugated Box M (310x220x150mm)\t18",
-        "boundingBox": {
-          "top": 606,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
-      },
-      "notes": "Faint ink / low-contrast in photograph — flagged for human review"
+        "locationHint": "top left",
+        "snippet": "18"
+      }
     },
     {
       "lineNo": 20,
-      "rawText": "Ln 20 7-ply Printed Corrugated Box M (310x220x150mm) -> Rate: ₹25",
+      "rawText": "7-ply Printed Corrugated Box M (310x220x150mm)",
       "unitPriceOriginal": 25,
       "uomOriginal": "box",
-      "unitPriceNormalized": 25,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 20 (Crisp text)",
-        "snippet": "Ln 20\t7-ply Printed Corrugated Box M (310x220x150mm)\t25",
-        "boundingBox": {
-          "top": 630,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "25"
       }
     },
     {
       "lineNo": 21,
-      "rawText": "Ln 21 7-ply Plain Corrugated Box L (400x300x200mm) -> Rate: ₹29",
+      "rawText": "7-ply Plain Corrugated Box L (400x300x200mm)",
       "unitPriceOriginal": 29,
       "uomOriginal": "box",
-      "unitPriceNormalized": 29,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 21 (Crisp text)",
-        "snippet": "Ln 21\t7-ply Plain Corrugated Box L (400x300x200mm)\t29",
-        "boundingBox": {
-          "top": 654,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "29"
       }
     },
     {
       "lineNo": 22,
-      "rawText": "Ln 22 7-ply Printed Corrugated Box L (400x300x200mm) -> Rate: ₹38",
+      "rawText": "7-ply Printed Corrugated Box L (400x300x200mm)",
       "unitPriceOriginal": 38,
       "uomOriginal": "box",
-      "unitPriceNormalized": 38,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 22 (Crisp text)",
-        "snippet": "Ln 22\t7-ply Printed Corrugated Box L (400x300x200mm)\t38",
-        "boundingBox": {
-          "top": 678,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "38"
       }
     },
     {
       "lineNo": 23,
-      "rawText": "Ln 23 7-ply Plain Corrugated Box XL (500x350x250mm) -> Rate: ₹39",
+      "rawText": "7-ply Plain Corrugated Box XL (500x350x250mm)",
       "unitPriceOriginal": 39,
       "uomOriginal": "box",
-      "unitPriceNormalized": 39,
       "coverage": "quoted",
-      "confidence": 0.94,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 23 (Crisp text)",
-        "snippet": "Ln 23\t7-ply Plain Corrugated Box XL (500x350x250mm)\t39",
-        "boundingBox": {
-          "top": 702,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
+        "locationHint": "top left",
+        "snippet": "39"
       }
     },
     {
       "lineNo": 24,
-      "rawText": "Ln 24 7-ply Printed Corrugated Box XL (500x350x250mm) -> Rate: ₹51",
+      "rawText": "7-ply Printed Corrugated Box XL (500x350x250mm)",
       "unitPriceOriginal": 51,
       "uomOriginal": "box",
-      "unitPriceNormalized": 51,
       "coverage": "quoted",
-      "confidence": 0.52,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Printed Row Ln 24 (Low-contrast faint ink)",
-        "snippet": "Ln 24\t7-ply Printed Corrugated Box XL (500x350x250mm)\t51",
-        "boundingBox": {
-          "top": 726,
-          "left": 120,
-          "width": 500,
-          "height": 22
-        }
-      },
-      "notes": "Faint ink / low-contrast in photograph — flagged for human review"
+        "locationHint": "top left",
+        "snippet": "51"
+      }
     },
     {
       "lineNo": 25,
-      "rawText": "Ln 25 not on standard rate card",
+      "rawText": "9-ply Heavy Duty Bulk Cargo Box (800x600x500mm)",
       "unitPriceOriginal": null,
       "uomOriginal": "box",
-      "unitPriceNormalized": null,
       "coverage": "missing",
-      "confidence": 0.9,
+      "confidence": 0,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Not in catalog",
-        "snippet": "Unquoted line"
+        "locationHint": "top left",
+        "snippet": "9-ply Heavy Duty Bulk Cargo Box (800x600x500mm)"
       }
     },
     {
       "lineNo": 26,
-      "rawText": "Ln 26 not on standard rate card",
+      "rawText": "Die-Cut Self-Locking Mailer Box S (200x140x70mm)",
       "unitPriceOriginal": null,
       "uomOriginal": "box",
-      "unitPriceNormalized": null,
       "coverage": "missing",
-      "confidence": 0.9,
+      "confidence": 0,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Not in catalog",
-        "snippet": "Unquoted line"
+        "locationHint": "top left",
+        "snippet": "Die-Cut Self-Locking Mailer Box S (200x140x70mm)"
       }
     },
     {
       "lineNo": 27,
-      "rawText": "Ln 27 not on standard rate card",
+      "rawText": "Die-Cut Self-Locking Mailer Box M (280x200x100mm)",
       "unitPriceOriginal": null,
       "uomOriginal": "box",
-      "unitPriceNormalized": null,
       "coverage": "missing",
-      "confidence": 0.9,
+      "confidence": 0,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Not in catalog",
-        "snippet": "Unquoted line"
+        "locationHint": "top left",
+        "snippet": "Die-Cut Self-Locking Mailer Box M (280x200x100mm)"
       }
     },
     {
       "lineNo": 28,
-      "rawText": "Ln 28 not on standard rate card",
+      "rawText": "Die-Cut Self-Locking Mailer Box L (350x250x120mm)",
       "unitPriceOriginal": null,
       "uomOriginal": "box",
-      "unitPriceNormalized": null,
       "coverage": "missing",
-      "confidence": 0.9,
+      "confidence": 0,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Not in catalog",
-        "snippet": "Unquoted line"
+        "locationHint": "top left",
+        "snippet": "Die-Cut Self-Locking Mailer Box L (350x250x120mm)"
       }
     },
     {
       "lineNo": 29,
-      "rawText": "Ln 29 not on standard rate card",
+      "rawText": "Corrugated Partition / Divider Set for Box M (24-cell)",
       "unitPriceOriginal": null,
       "uomOriginal": "box",
-      "unitPriceNormalized": null,
       "coverage": "missing",
-      "confidence": 0.9,
+      "confidence": 0,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Not in catalog",
-        "snippet": "Unquoted line"
+        "locationHint": "top left",
+        "snippet": "Corrugated Partition / Divider Set for Box M (24-cell)"
       }
     },
     {
       "lineNo": 30,
-      "rawText": "Ln 30 not on standard rate card",
+      "rawText": "Heavy Duty Corrugated Pallet Tray (1200x1000x150mm)",
       "unitPriceOriginal": null,
       "uomOriginal": "box",
-      "unitPriceNormalized": null,
       "coverage": "missing",
-      "confidence": 0.9,
+      "confidence": 0,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Not in catalog",
-        "snippet": "Unquoted line"
+        "locationHint": "top left",
+        "snippet": "Heavy Duty Corrugated Pallet Tray (1200x1000x150mm)"
       }
     }
   ],
   "questionnaireAnswers": [
     {
       "qId": "q1",
-      "questionText": "ISO 9001:2015 certified?",
       "answer": "Yes",
-      "confidence": 0.95,
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Bottom note",
-        "snippet": "ISO 9001: Yes"
+        "locationHint": "Compliance & Terms",
+        "snippet": "Yes"
       }
     },
     {
       "qId": "q2",
-      "questionText": "Standard payment terms",
-      "answer": 30,
-      "confidence": 0.95,
+      "answer": "30",
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Bottom note",
-        "snippet": "Payment: 30 days"
+        "locationHint": "Compliance & Terms",
+        "snippet": "30"
       }
     },
     {
       "qId": "q3",
-      "questionText": "Lead time",
-      "answer": 14,
-      "confidence": 0.95,
+      "answer": "14",
+      "confidence": 1,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Bottom note",
-        "snippet": "Lead time: 14 days"
+        "locationHint": "Compliance & Terms",
+        "snippet": "14"
       }
     },
     {
       "qId": "q4",
-      "questionText": "Recycled fibre content (%)?",
-      "answer": null,
+      "answer": "[object Object]",
       "confidence": 0,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
-        "locationHint": "Omitted",
-        "snippet": "Question not answered on rate card"
+        "locationHint": "Compliance & Terms",
+        "snippet": "[object Object]"
       }
     }
   ],
   "terms": {
-    "freight": "Ex-works Jaipur",
+    "freight": null,
     "paymentDays": 30,
     "leadTimeDays": 14,
     "discountNote": null,
-    "volumeDiscountPercent": 0,
-    "volumeDiscountThresholdQty": 0
+    "volumeDiscountPercent": null,
+    "volumeDiscountThresholdQty": null
   },
   "flags": [
-    "angled_phone_photo",
-    "low_contrast_rows_5_11_19_24",
-    "recycled_fibre_unanswered"
+    "quoted_in_inr",
+    "priced_per_box"
   ],
-  "overallConfidence": 0.78,
-  "extractedAt": "2026-11-13T11:18:10.590Z"
+  "overallConfidence": 1,
+  "extractedAt": "2026-11-13T13:47:39.789Z"
 }

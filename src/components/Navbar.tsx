@@ -45,7 +45,7 @@ export function Navbar({ rfxId = 'RFX-2026-CORR-001', category = 'Corrugated Pac
             >
               <span className="flex items-center space-x-1.5">
                 <Layers className="w-3.5 h-3.5" />
-                <span>1. RFx (30 Lines)</span>
+                <span>1. RFx Specification</span>
               </span>
             </button>
             <button

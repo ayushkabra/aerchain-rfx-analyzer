@@ -1,3 +1,6 @@
+import fs from 'fs';
+import path from 'path';
+
 export interface LLMCallOptions {
   systemPrompt: string;
   userPrompt: string;
@@ -14,17 +17,30 @@ export interface LLMVisionOptions {
   model?: string;
 }
 
+export function getEnv(key: string): string | undefined {
+  if (process.env[key]) return process.env[key];
+  try {
+    const envPath = path.join(process.cwd(), '.env.local');
+    if (fs.existsSync(envPath)) {
+      const content = fs.readFileSync(envPath, 'utf-8');
+      const match = content.match(new RegExp(`^${key}\\s*=\\s*([^\\r\\n#]+)`, 'm'));
+      if (match) return match[1].trim();
+    }
+  } catch {}
+  return undefined;
+}
+
 // Groq configuration
 function getGroqConfig() {
-  const apiKey = process.env.GROQ_API_KEY || process.env.OPENROUTER_API_KEY;
-  const isGroq = !!process.env.GROQ_API_KEY;
+  const apiKey = getEnv('GROQ_API_KEY') || getEnv('OPENROUTER_API_KEY');
+  const isGroq = !!getEnv('GROQ_API_KEY');
   const baseUrl = isGroq ? 'https://api.groq.com/openai/v1' : 'https://openrouter.ai/api/v1';
   
   // Default text model: use env var first, or reliable Groq fallback
-  const defaultTextModel = process.env.TEXT_MODEL || 'openai/gpt-oss-20b';
+  const defaultTextModel = getEnv('TEXT_MODEL') || 'openai/gpt-oss-20b';
   
   // Default vision model: use env var first, or reliable Groq fallback
-  const defaultVisionModel = process.env.VISION_MODEL || 'meta-llama/llama-4-scout-17b-16e-instruct';
+  const defaultVisionModel = getEnv('VISION_MODEL') || 'meta-llama/llama-4-scout-17b-16e-instruct';
 
   return { apiKey, baseUrl, defaultTextModel, defaultVisionModel, isGroq };
 }
@@ -100,6 +116,49 @@ export async function callLLMText(options: LLMCallOptions): Promise<string> {
     }
 
     if (res.status === 429) {
+      const openRouterKey = getEnv('OPENROUTER_API_KEY');
+      if (openRouterKey) {
+        console.warn('Groq rate limit (429) hit. Seamlessly routing to OpenRouter...');
+        try {
+          const orRes = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${openRouterKey}`,
+              'Content-Type': 'application/json',
+              'HTTP-Referer': 'http://localhost:3000',
+              'X-Title': 'Aerchain RFx Analyzer',
+            },
+            body: JSON.stringify({
+              ...body,
+              model: 'meta-llama/llama-3.3-70b-instruct',
+            }),
+          });
+          if (orRes.ok) {
+            const orJson = await orRes.json();
+            const orChoice = orJson.choices?.[0];
+            if (orChoice?.message?.content) {
+              return orChoice.message.content.trim();
+            }
+          }
+        } catch (orErr) {
+          console.error('OpenRouter fallback failed:', orErr);
+        }
+      }
+
+      console.warn(`Rate limit reached (429). Waiting 15 seconds before retrying...`);
+      await new Promise(r => setTimeout(r, 15000));
+      const retryRes = await fetch(`${baseUrl}/chat/completions`, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(body),
+      });
+      if (retryRes.ok) {
+        const retryJson = await retryRes.json();
+        const retryChoice = retryJson.choices?.[0];
+        if (retryChoice?.message?.content) {
+          return retryChoice.message.content.trim();
+        }
+      }
       throw new Error(`Rate limit reached (429): ${parsedMessage}`);
     }
 
@@ -120,10 +179,17 @@ export async function callLLMText(options: LLMCallOptions): Promise<string> {
 }
 
 export async function callLLMVision(options: LLMVisionOptions): Promise<string> {
-  const { apiKey, baseUrl, defaultVisionModel, isGroq } = getGroqConfig();
+  const openRouterKey = getEnv('OPENROUTER_API_KEY');
+  const groqKey = getEnv('GROQ_API_KEY');
+  
+  // Use OpenRouter if configured, otherwise Groq
+  const useOpenRouter = !!openRouterKey;
+  const apiKey = useOpenRouter ? openRouterKey : groqKey;
+  const baseUrl = useOpenRouter ? 'https://openrouter.ai/api/v1' : 'https://api.groq.com/openai/v1';
+  const defaultVisionModel = getEnv('VISION_MODEL') || (useOpenRouter ? 'meta-llama/llama-4-scout-17b-16e-instruct' : 'llama-3.2-11b-vision-preview');
 
   if (!apiKey) {
-    throw new Error('GROQ_API_KEY is not configured in .env.local. Please add your Groq API key.');
+    throw new Error('Neither OPENROUTER_API_KEY nor GROQ_API_KEY is configured in .env.local.');
   }
 
   const model = options.model || defaultVisionModel;
@@ -137,7 +203,7 @@ export async function callLLMVision(options: LLMVisionOptions): Promise<string> 
     'Content-Type': 'application/json',
   };
 
-  if (!isGroq) {
+  if (useOpenRouter) {
     headers['HTTP-Referer'] = 'http://localhost:3000';
     headers['X-Title'] = 'Aerchain RFx Analyzer';
   }
