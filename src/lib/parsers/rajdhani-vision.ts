@@ -130,7 +130,9 @@ ${rfx.lineItems.map(l => `Ln ${l.lineNo}: ${l.description}`).join('\n')}`;
       freight: 'Ex-works Jaipur',
       paymentDays: 30,
       leadTimeDays: 14,
-      discountNote: null
+      discountNote: null,
+      volumeDiscountPercent: 0,
+      volumeDiscountThresholdQty: 0
     },
     flags: ['angled_phone_photo', 'low_contrast_rows_5_11_19_24', 'recycled_fibre_unanswered'],
     overallConfidence: 0.78,

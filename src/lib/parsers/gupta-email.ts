@@ -91,7 +91,9 @@ export async function parseGuptaEmail(rfx: RFx): Promise<VendorResponse> {
       freight: 'Freight extra',
       paymentDays: 30,
       leadTimeDays: 14,
-      discountNote: 'Printed ones add ₹10/box for the plate'
+      discountNote: 'Printed ones add ₹10/box for the plate',
+      volumeDiscountPercent: 0,
+      volumeDiscountThresholdQty: 0
     },
     flags: ['unstructured_email', 'priced_per_kg', 'freight_extra', 'q1_q4_unanswered'],
     overallConfidence: 0.75,

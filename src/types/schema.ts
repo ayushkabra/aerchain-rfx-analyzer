@@ -81,12 +81,12 @@ export const QuestionnaireAnswerSchema = z.object({
 export type QuestionnaireAnswer = z.infer<typeof QuestionnaireAnswerSchema>;
 
 export const VendorTermsSchema = z.object({
-  freight: z.string().nullable().optional().default(null),
-  paymentDays: z.union([z.number(), z.string().transform(v => parseInt(v) || null)]).nullable().optional().default(null),
-  leadTimeDays: z.union([z.number(), z.string().transform(v => parseInt(v) || null)]).nullable().optional().default(null),
-  discountNote: z.string().nullable().optional().default(null),
-  volumeDiscountPercent: z.number().optional().default(0),
-  volumeDiscountThresholdQty: z.number().optional().default(0),
+  freight: z.string().nullable().optional(),
+  paymentDays: z.union([z.number(), z.string().transform(v => parseInt(v) || null)]).nullable().optional(),
+  leadTimeDays: z.union([z.number(), z.string().transform(v => parseInt(v) || null)]).nullable().optional(),
+  discountNote: z.string().nullable().optional(),
+  volumeDiscountPercent: z.number().nullable().optional(),
+  volumeDiscountThresholdQty: z.number().nullable().optional(),
 });
 
 export type VendorTerms = z.infer<typeof VendorTermsSchema>;
