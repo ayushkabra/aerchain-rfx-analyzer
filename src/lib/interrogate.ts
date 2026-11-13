@@ -176,16 +176,16 @@ export function executeDeterministicMath(
   let totalSpend = 0;
   let baselineSpend = 0;
 
-  comparison.rows.forEach(row => {
+  for (const row of comparison.rows) {
     const item = row.lineItem;
 
     // Check line ply filter
     if (op.filters.plys && op.filters.plys.length > 0) {
-      if (!op.filters.plys.includes(item.ply)) return;
+      if (!op.filters.plys.includes(item.ply)) continue;
     }
 
     // Check line min quantity filter
-    if (op.filters.minQty && item.qty < op.filters.minQty) return;
+    if (op.filters.minQty && item.qty < op.filters.minQty) continue;
 
     // Single-vendor baseline (Shakti or first fully-quoted vendor)
     const shaktiCell = row.cells['vendor1_shakti'];
@@ -196,38 +196,40 @@ export function executeDeterministicMath(
     let bestCell: ComparisonCell | null = null;
     let nextBestPrice: number | null = null;
 
-    eligibleVendors.forEach(vId => {
+    for (const vId of eligibleVendors) {
       const cell = row.cells[vId];
       if (cell && cell.coverage === 'quoted' && cell.effectiveUnitPrice !== null) {
-        if (bestCell === null || cell.effectiveUnitPrice < bestCell.effectiveUnitPrice!) {
-          if (bestCell) nextBestPrice = bestCell.effectiveUnitPrice;
+        if (bestCell === null || cell.effectiveUnitPrice < (bestCell as ComparisonCell).effectiveUnitPrice!) {
+          if (bestCell !== null) nextBestPrice = (bestCell as ComparisonCell).effectiveUnitPrice;
           bestCell = cell;
         } else if (nextBestPrice === null || cell.effectiveUnitPrice < nextBestPrice) {
           nextBestPrice = cell.effectiveUnitPrice;
         }
       }
-    });
+    }
 
-    if (bestCell && bestCell.effectiveUnitPrice !== null) {
-      const extCost = Math.round(bestCell.effectiveUnitPrice * item.qty);
+    const awardedCell = bestCell as ComparisonCell | null;
+    if (awardedCell !== null && awardedCell.effectiveUnitPrice !== null) {
+      const unitPrice = awardedCell.effectiveUnitPrice;
+      const extCost = Math.round(unitPrice * item.qty);
       totalSpend += extCost;
-      const lineSavings = baselinePrice > 0 ? Math.round((baselinePrice - bestCell.effectiveUnitPrice) * item.qty) : 0;
+      const lineSavings = baselinePrice > 0 ? Math.round((baselinePrice - unitPrice) * item.qty) : 0;
 
       lineAwards.push({
         lineNo: item.lineNo,
         description: item.description,
         qty: item.qty,
         ply: item.ply,
-        awardedVendorId: bestCell.vendorId,
-        awardedVendorName: bestCell.vendorName,
-        awardedUnitPrice: bestCell.effectiveUnitPrice,
+        awardedVendorId: awardedCell.vendorId,
+        awardedVendorName: awardedCell.vendorName,
+        awardedUnitPrice: unitPrice,
         extendedCost: extCost,
         alternativePrice: nextBestPrice ?? baselinePrice,
         lineSavingsINR: Math.max(0, lineSavings),
-        sourceDoc: bestCell.source.doc,
+        sourceDoc: awardedCell.source.doc,
       });
     }
-  });
+  }
 
   // 3. Compute vendor spend allocations
   const allocationMap = new Map<string, { name: string; lines: number; spend: number }>();
