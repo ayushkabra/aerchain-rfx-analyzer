@@ -15,31 +15,43 @@ export const VENDOR_IDS = [
   'vendor5_gupta',
 ] as const;
 
+export async function getSingleVendor(
+  id: string, 
+  rfx: RFx, 
+  forceLive = false
+): Promise<VendorResponse> {
+  if (!forceLive) {
+    const cached = loadVendorFromCache(id);
+    if (cached) return cached;
+  }
+
+  let response: VendorResponse;
+
+  if (id === 'vendor1_shakti') {
+    const excelPath = path.join(process.cwd(), 'data', 'vendors', 'vendor1_shakti_packaging.xlsx');
+    response = parseShaktiExcel(excelPath, rfx);
+  } else if (id === 'vendor2_everest') {
+    response = await parseEverestPDF(rfx, forceLive);
+  } else if (id === 'vendor3_metro') {
+    response = await parseMetroWord(rfx, forceLive);
+  } else if (id === 'vendor4_rajdhani') {
+    response = await parseRajdhaniVision(rfx, forceLive);
+  } else if (id === 'vendor5_gupta') {
+    response = await parseGuptaEmail(rfx);
+  } else {
+    throw new Error(`Unknown vendorId: ${id}`);
+  }
+
+  saveVendorToCache(response);
+  return response;
+}
+
 export async function getAllVendors(rfx: RFx): Promise<VendorResponse[]> {
   const vendors: VendorResponse[] = [];
 
   for (const id of VENDOR_IDS) {
     try {
-      let vendor = loadVendorFromCache(id);
-      if (!vendor) {
-        if (id === 'vendor1_shakti') {
-          const excelPath = path.join(process.cwd(), 'data', 'vendors', 'vendor1_shakti_packaging.xlsx');
-          vendor = parseShaktiExcel(excelPath, rfx);
-        } else if (id === 'vendor2_everest') {
-          vendor = await parseEverestPDF(rfx);
-        } else if (id === 'vendor3_metro') {
-          vendor = await parseMetroWord(rfx);
-        } else if (id === 'vendor4_rajdhani') {
-          vendor = await parseRajdhaniVision(rfx);
-        } else if (id === 'vendor5_gupta') {
-          vendor = await parseGuptaEmail(rfx);
-        }
-
-        if (vendor) {
-          saveVendorToCache(vendor);
-        }
-      }
-
+      const vendor = await getSingleVendor(id, rfx, false);
       if (vendor) {
         vendors.push(vendor);
       }
