@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
     const rfx = getCanonicalRFx();
 
     // Helper to get or extract vendor
-    async function getOrExtractVendor(id: string): Promise<VendorResponse> {
+    const getOrExtractVendor = async (id: string): Promise<VendorResponse> => {
       if (!forceLive) {
         const cached = loadVendorFromCache(id);
         if (cached) return cached;
@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
 
       saveVendorToCache(response);
       return response;
-    }
+    };
 
     if (vendorId === 'all') {
       const vendorIds = ['vendor1_shakti', 'vendor2_everest', 'vendor3_metro', 'vendor4_rajdhani', 'vendor5_gupta'];
