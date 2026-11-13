@@ -1,0 +1,332 @@
+{
+  "id": "RFX-2026-CORR-001",
+  "title": "Annual Rate Contract — Corrugated Packaging (FY27)",
+  "category": "Corrugated Packaging",
+  "buyer": "Nimbus Consumer Pvt Ltd — Procurement",
+  "currency": "INR",
+  "lineItems": [
+    {
+      "lineNo": 1,
+      "description": "3-ply Plain Corrugated Box S (230x160x100mm)",
+      "qty": 2000,
+      "uom": "box",
+      "ply": 3,
+      "size": "S",
+      "dims_mm": "230x160x100",
+      "weight_kg_per_box": 0.12
+    },
+    {
+      "lineNo": 2,
+      "description": "3-ply Printed Corrugated Box S (230x160x100mm)",
+      "qty": 12000,
+      "uom": "box",
+      "ply": 3,
+      "size": "S",
+      "dims_mm": "230x160x100",
+      "weight_kg_per_box": 0.12
+    },
+    {
+      "lineNo": 3,
+      "description": "3-ply Plain Corrugated Box M (310x220x150mm)",
+      "qty": 5000,
+      "uom": "box",
+      "ply": 3,
+      "size": "M",
+      "dims_mm": "310x220x150",
+      "weight_kg_per_box": 0.22
+    },
+    {
+      "lineNo": 4,
+      "description": "3-ply Printed Corrugated Box M (310x220x150mm)",
+      "qty": 5000,
+      "uom": "box",
+      "ply": 3,
+      "size": "M",
+      "dims_mm": "310x220x150",
+      "weight_kg_per_box": 0.22
+    },
+    {
+      "lineNo": 5,
+      "description": "3-ply Plain Corrugated Box L (400x300x200mm)",
+      "qty": 2000,
+      "uom": "box",
+      "ply": 3,
+      "size": "L",
+      "dims_mm": "400x300x200",
+      "weight_kg_per_box": 0.38
+    },
+    {
+      "lineNo": 6,
+      "description": "3-ply Printed Corrugated Box L (400x300x200mm)",
+      "qty": 12000,
+      "uom": "box",
+      "ply": 3,
+      "size": "L",
+      "dims_mm": "400x300x200",
+      "weight_kg_per_box": 0.38
+    },
+    {
+      "lineNo": 7,
+      "description": "3-ply Plain Corrugated Box XL (500x350x250mm)",
+      "qty": 2000,
+      "uom": "box",
+      "ply": 3,
+      "size": "XL",
+      "dims_mm": "500x350x250",
+      "weight_kg_per_box": 0.55
+    },
+    {
+      "lineNo": 8,
+      "description": "3-ply Printed Corrugated Box XL (500x350x250mm)",
+      "qty": 30000,
+      "uom": "box",
+      "ply": 3,
+      "size": "XL",
+      "dims_mm": "500x350x250",
+      "weight_kg_per_box": 0.55
+    },
+    {
+      "lineNo": 9,
+      "description": "5-ply Plain Corrugated Box S (230x160x100mm)",
+      "qty": 15000,
+      "uom": "box",
+      "ply": 5,
+      "size": "S",
+      "dims_mm": "230x160x100",
+      "weight_kg_per_box": 0.12
+    },
+    {
+      "lineNo": 10,
+      "description": "5-ply Printed Corrugated Box S (230x160x100mm)",
+      "qty": 2000,
+      "uom": "box",
+      "ply": 5,
+      "size": "S",
+      "dims_mm": "230x160x100",
+      "weight_kg_per_box": 0.12
+    },
+    {
+      "lineNo": 11,
+      "description": "5-ply Plain Corrugated Box M (310x220x150mm)",
+      "qty": 8000,
+      "uom": "box",
+      "ply": 5,
+      "size": "M",
+      "dims_mm": "310x220x150",
+      "weight_kg_per_box": 0.22
+    },
+    {
+      "lineNo": 12,
+      "description": "5-ply Printed Corrugated Box M (310x220x150mm)",
+      "qty": 20000,
+      "uom": "box",
+      "ply": 5,
+      "size": "M",
+      "dims_mm": "310x220x150",
+      "weight_kg_per_box": 0.22
+    },
+    {
+      "lineNo": 13,
+      "description": "5-ply Plain Corrugated Box L (400x300x200mm)",
+      "qty": 12000,
+      "uom": "box",
+      "ply": 5,
+      "size": "L",
+      "dims_mm": "400x300x200",
+      "weight_kg_per_box": 0.38
+    },
+    {
+      "lineNo": 14,
+      "description": "5-ply Printed Corrugated Box L (400x300x200mm)",
+      "qty": 20000,
+      "uom": "box",
+      "ply": 5,
+      "size": "L",
+      "dims_mm": "400x300x200",
+      "weight_kg_per_box": 0.38
+    },
+    {
+      "lineNo": 15,
+      "description": "5-ply Plain Corrugated Box XL (500x350x250mm)",
+      "qty": 30000,
+      "uom": "box",
+      "ply": 5,
+      "size": "XL",
+      "dims_mm": "500x350x250",
+      "weight_kg_per_box": 0.55
+    },
+    {
+      "lineNo": 16,
+      "description": "5-ply Printed Corrugated Box XL (500x350x250mm)",
+      "qty": 20000,
+      "uom": "box",
+      "ply": 5,
+      "size": "XL",
+      "dims_mm": "500x350x250",
+      "weight_kg_per_box": 0.55
+    },
+    {
+      "lineNo": 17,
+      "description": "7-ply Plain Corrugated Box S (230x160x100mm)",
+      "qty": 2000,
+      "uom": "box",
+      "ply": 7,
+      "size": "S",
+      "dims_mm": "230x160x100",
+      "weight_kg_per_box": 0.12
+    },
+    {
+      "lineNo": 18,
+      "description": "7-ply Printed Corrugated Box S (230x160x100mm)",
+      "qty": 5000,
+      "uom": "box",
+      "ply": 7,
+      "size": "S",
+      "dims_mm": "230x160x100",
+      "weight_kg_per_box": 0.12
+    },
+    {
+      "lineNo": 19,
+      "description": "7-ply Plain Corrugated Box M (310x220x150mm)",
+      "qty": 30000,
+      "uom": "box",
+      "ply": 7,
+      "size": "M",
+      "dims_mm": "310x220x150",
+      "weight_kg_per_box": 0.22
+    },
+    {
+      "lineNo": 20,
+      "description": "7-ply Printed Corrugated Box M (310x220x150mm)",
+      "qty": 15000,
+      "uom": "box",
+      "ply": 7,
+      "size": "M",
+      "dims_mm": "310x220x150",
+      "weight_kg_per_box": 0.22
+    },
+    {
+      "lineNo": 21,
+      "description": "7-ply Plain Corrugated Box L (400x300x200mm)",
+      "qty": 20000,
+      "uom": "box",
+      "ply": 7,
+      "size": "L",
+      "dims_mm": "400x300x200",
+      "weight_kg_per_box": 0.38
+    },
+    {
+      "lineNo": 22,
+      "description": "7-ply Printed Corrugated Box L (400x300x200mm)",
+      "qty": 5000,
+      "uom": "box",
+      "ply": 7,
+      "size": "L",
+      "dims_mm": "400x300x200",
+      "weight_kg_per_box": 0.38
+    },
+    {
+      "lineNo": 23,
+      "description": "7-ply Plain Corrugated Box XL (500x350x250mm)",
+      "qty": 12000,
+      "uom": "box",
+      "ply": 7,
+      "size": "XL",
+      "dims_mm": "500x350x250",
+      "weight_kg_per_box": 0.55
+    },
+    {
+      "lineNo": 24,
+      "description": "7-ply Printed Corrugated Box XL (500x350x250mm)",
+      "qty": 5000,
+      "uom": "box",
+      "ply": 7,
+      "size": "XL",
+      "dims_mm": "500x350x250",
+      "weight_kg_per_box": 0.55
+    },
+    {
+      "lineNo": 25,
+      "description": "9-ply Heavy Duty Bulk Cargo Box (800x600x500mm)",
+      "qty": 3000,
+      "uom": "box",
+      "ply": 9,
+      "size": "XL",
+      "dims_mm": "800x600x500",
+      "weight_kg_per_box": 1.20
+    },
+    {
+      "lineNo": 26,
+      "description": "Die-Cut Self-Locking Mailer Box S (200x140x70mm)",
+      "qty": 15000,
+      "uom": "box",
+      "ply": 3,
+      "size": "S",
+      "dims_mm": "200x140x70",
+      "weight_kg_per_box": 0.09
+    },
+    {
+      "lineNo": 27,
+      "description": "Die-Cut Self-Locking Mailer Box M (280x200x100mm)",
+      "qty": 25000,
+      "uom": "box",
+      "ply": 3,
+      "size": "M",
+      "dims_mm": "280x200x100",
+      "weight_kg_per_box": 0.16
+    },
+    {
+      "lineNo": 28,
+      "description": "Die-Cut Self-Locking Mailer Box L (350x250x120mm)",
+      "qty": 10000,
+      "uom": "box",
+      "ply": 3,
+      "size": "L",
+      "dims_mm": "350x250x120",
+      "weight_kg_per_box": 0.28
+    },
+    {
+      "lineNo": 29,
+      "description": "Corrugated Partition / Divider Set for Box M (24-cell)",
+      "qty": 8000,
+      "uom": "set",
+      "ply": 3,
+      "size": "M",
+      "dims_mm": "310x220x150",
+      "weight_kg_per_box": 0.15
+    },
+    {
+      "lineNo": 30,
+      "description": "Heavy Duty Corrugated Pallet Tray (1200x1000x150mm)",
+      "qty": 5000,
+      "uom": "tray",
+      "ply": 5,
+      "size": "XL",
+      "dims_mm": "1200x1000x150",
+      "weight_kg_per_box": 0.85
+    }
+  ],
+  "questionnaire": [
+    {
+      "id": "q1",
+      "question": "Are you ISO 9001:2015 certified?",
+      "type": "yes_no"
+    },
+    {
+      "id": "q2",
+      "question": "Standard payment terms (days)?",
+      "type": "number"
+    },
+    {
+      "id": "q3",
+      "question": "Lead time for repeat orders (days)?",
+      "type": "number"
+    },
+    {
+      "id": "q4",
+      "question": "Recycled fibre content (%)?",
+      "type": "number"
+    }
+  ],
+  "terms": "Prices to be quoted per box, INR, ex-works unless stated. Freight and taxes to be specified separately."
+}
