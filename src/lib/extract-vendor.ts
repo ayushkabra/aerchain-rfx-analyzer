@@ -15,10 +15,10 @@ function buildRfxContext(rfx: RFx): string {
 const EXTRACTION_RULES = `You are a procurement extraction engine. Extract ONLY what is actually present in the vendor document. Never invent a number, never fill from outside knowledge, never assume a value the document does not state.
 RULES:
 1. For every RFx line, find the vendor's quote. If the vendor did not price that line, set unitPriceOriginal=null and coverage="missing". Never output 0 for a line that was not quoted.
-2. Record the price EXACTLY as the vendor states it, in THEIR currency and THEIR unit. Do NOT convert currency or units. Set currencyOriginal from the document itself. Set uomOriginal to one of: "box", "per_100", "per_kg", "piece" — choose based on what the document says.
+2. Record the price EXACTLY as the vendor states it, in THEIR currency and THEIR unit. Do NOT convert currency or units. Set currencyOriginal from the document itself. Set uomOriginal to one of: "box", "per_100", "per_kg", "piece" — choose based on what the document says. If a vendor quotes rates per kg by ply (e.g. per-kg rates for 3-ply, 5-ply, 7-ply boxes), map the stated per-kg rate to the box lines of that ply with uomOriginal="per_kg".
 3. confidence (0.00-1.00) must reflect your genuine certainty FROM THE DOCUMENT: high only when the number is explicit and unambiguous; lower when it is implied, derived, or hard to read. Use coverage="ambiguous" when you are unsure which line or price applies.
 4. source must point at the real evidence: {doc, locationHint (where in the document), snippet (the verbatim text you read the value from)}.
-5. questionnaireAnswers: answer each question from the document. If a question is NOT answered in the document, set answer=null and confidence=0. Do not guess.
+5. questionnaireAnswers: return EXACTLY one object for EACH questionnaire id (q1, q2, q3, q4), in order. If the document does not state an answer, set answer=null and confidence=0. Never omit a question.
 6. terms: capture freight, paymentDays, leadTimeDays, discountNote, and volume discount (volumeDiscountPercent / volumeDiscountThresholdQty) ONLY if the document states them.
 7. flags: short machine tags for anything notable you observed (e.g. "quoted_in_usd", "priced_per_100", "priced_per_kg", "line_omitted", "unanswered_questions").
 Return ONLY a valid JSON object. No prose, no markdown.`;
@@ -66,14 +66,6 @@ Return JSON: {
   sourceFormat: "${sourceFormat}",
   sourceFileName: "${sourceFileName}",
   currencyOriginal: (currency symbol or code found in document, e.g. "INR", "USD", "Rs."),
-  lineQuotes: [
-    (Extract one object for EVERY RFx line from lineNo 1 to ${rfx.lineItems.length}. If a line is not quoted or omitted in the document, set unitPriceOriginal: null and coverage: "missing")
-    { lineNo, rawText, unitPriceOriginal, uomOriginal, coverage, confidence, source:{doc:"${sourceFileName}", locationHint, snippet}, notes? }
-  ],
-  questionnaireAnswers: [
-    (Extract answers for all questionnaire questions found in the document)
-    { qId, answer, confidence, source:{doc:"${sourceFileName}", locationHint, snippet} }
-  ],
   terms: {
     freight: (freight terms string or null),
     paymentDays: (number of payment days or null),
@@ -82,6 +74,17 @@ Return JSON: {
     volumeDiscountPercent: (volume discount % if stated, else null),
     volumeDiscountThresholdQty: (volume discount threshold qty if stated, else null)
   },
+  questionnaireAnswers: [
+    (Extract one object for EACH question q1, q2, q3, q4. If unmentioned in document, set answer=null, confidence=0)
+    { qId: "q1", answer, confidence, source:{doc:"${sourceFileName}", locationHint, snippet} },
+    { qId: "q2", answer, confidence, source:{doc:"${sourceFileName}", locationHint, snippet} },
+    { qId: "q3", answer, confidence, source:{doc:"${sourceFileName}", locationHint, snippet} },
+    { qId: "q4", answer, confidence, source:{doc:"${sourceFileName}", locationHint, snippet} }
+  ],
+  lineQuotes: [
+    (Extract one object for EVERY RFx line from lineNo 1 to ${rfx.lineItems.length}. If a line is not quoted or omitted in the document, set unitPriceOriginal: null and coverage: "missing")
+    { lineNo, rawText, unitPriceOriginal, uomOriginal, coverage, confidence, source:{doc:"${sourceFileName}", locationHint, snippet}, notes? }
+  ],
   flags: (array of short string tags for notable observations),
   overallConfidence: (number between 0 and 1)
 }`;

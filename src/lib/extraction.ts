@@ -37,11 +37,21 @@ export function loadExtractedVendorResponse(vendorId: string): VendorResponse | 
 // Clean markdown code blocks from LLM output
 export function cleanJsonText(text: string): string {
   let clean = text.trim();
-  if (clean.startsWith('```json')) {
+  const codeBlockMatch = clean.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+  if (codeBlockMatch) {
+    clean = codeBlockMatch[1].trim();
+  } else if (clean.startsWith('```json')) {
     clean = clean.replace(/^```json\s*/, '').replace(/\s*```$/, '');
   } else if (clean.startsWith('```')) {
     clean = clean.replace(/^```\s*/, '').replace(/\s*```$/, '');
   }
+
+  const firstBrace = clean.indexOf('{');
+  const lastBrace = clean.lastIndexOf('}');
+  if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+    clean = clean.slice(firstBrace, lastBrace + 1);
+  }
+
   return clean.trim();
 }
 
@@ -115,6 +125,27 @@ export function sanitizeRawVendorJson(raw: any, fileName: string, vendorId: stri
           notes: q.notes,
         };
       });
+
+      // Ensure all lines 1 to 30 are represented (omitted lines get coverage: 'missing', unitPriceOriginal: null)
+      const existingLineNos = new Set(result.lineQuotes.map((q: any) => q.lineNo));
+      for (let i = 1; i <= 30; i++) {
+        if (!existingLineNos.has(i)) {
+          result.lineQuotes.push({
+            lineNo: i,
+            rawText: `Line ${i}`,
+            unitPriceOriginal: null,
+            uomOriginal: 'box',
+            coverage: 'missing',
+            confidence: 1,
+            source: {
+              doc: fileName,
+              locationHint: 'document',
+              snippet: 'Not quoted in document'
+            }
+          });
+        }
+      }
+      result.lineQuotes.sort((a: any, b: any) => a.lineNo - b.lineNo);
     }
   }
 
@@ -158,6 +189,25 @@ export function sanitizeRawVendorJson(raw: any, fileName: string, vendorId: stri
   } else {
     result.questionnaireAnswers = [];
   }
+
+  // Ensure all 4 questionnaire answers (q1, q2, q3, q4) exist in order
+  const standardQIds = ['q1', 'q2', 'q3', 'q4'];
+  const existingQIds = new Set(result.questionnaireAnswers.map((a: any) => a.qId));
+  for (const qId of standardQIds) {
+    if (!existingQIds.has(qId)) {
+      result.questionnaireAnswers.push({
+        qId,
+        answer: null,
+        confidence: 0,
+        source: {
+          doc: fileName,
+          locationHint: 'Compliance & Terms',
+          snippet: 'Not stated in document'
+        }
+      });
+    }
+  }
+  result.questionnaireAnswers.sort((a: any, b: any) => a.qId.localeCompare(b.qId));
 
   // 3. Sanitize terms
   if (!result.terms || typeof result.terms !== 'object') {

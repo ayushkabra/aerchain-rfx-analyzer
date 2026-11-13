@@ -22,7 +22,15 @@ export function parseExcelDocument(filePath: string): ParsedExcelDocument {
     throw new Error(`Excel file not found at: ${filePath}`);
   }
 
-  const fileBuffer = fs.readFileSync(filePath);
+  let fileBuffer: Buffer;
+  try {
+    fileBuffer = fs.readFileSync(filePath);
+  } catch (err: any) {
+    if (err.code === 'EBUSY' || err.code === 'EPERM') {
+      throw new Error(`Excel file is locked by another process (e.g., Microsoft Excel). Please close Excel and retry: ${err.message}`);
+    }
+    throw err;
+  }
   const workbook = XLSX.read(fileBuffer, { type: 'buffer' });
   const fileName = path.basename(filePath);
 

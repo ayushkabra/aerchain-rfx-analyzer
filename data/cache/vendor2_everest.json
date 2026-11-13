@@ -11,11 +11,11 @@
       "unitPriceOriginal": 0.093,
       "uomOriginal": "box",
       "coverage": "quoted",
-      "confidence": 1,
+      "confidence": 0.99,
       "source": {
         "doc": "vendor2_everest_corrugators.pdf",
-        "locationHint": "Line 1",
-        "snippet": "1\\t3-ply Plain Corrugated Box S (230x160x100mm)\\t2,000\\t0.093"
+        "locationHint": "table row 1",
+        "snippet": "1\t3-ply Plain Corrugated Box S (230x160x100mm)\t2,000\t0.093"
       }
     },
     {
@@ -24,11 +24,11 @@
       "unitPriceOriginal": 0.209,
       "uomOriginal": "box",
       "coverage": "quoted",
-      "confidence": 1,
+      "confidence": 0.99,
       "source": {
         "doc": "vendor2_everest_corrugators.pdf",
-        "locationHint": "Line 2",
-        "snippet": "2\\t3-ply Printed Corrugated Box S (230x160x100mm)\\t12,000\\t0.209"
+        "locationHint": "table row 2",
+        "snippet": "2\t3-ply Printed Corrugated Box S (230x160x100mm)\t12,000\t0.209"
       }
     },
     {
@@ -37,11 +37,11 @@
       "unitPriceOriginal": 0.146,
       "uomOriginal": "box",
       "coverage": "quoted",
-      "confidence": 1,
+      "confidence": 0.99,
       "source": {
         "doc": "vendor2_everest_corrugators.pdf",
-        "locationHint": "Line 3",
-        "snippet": "3\\t3-ply Plain Corrugated Box M (310x220x150mm)\\t5,000\\t0.146"
+        "locationHint": "table row 3",
+        "snippet": "3\t3-ply Plain Corrugated Box M (310x220x150mm)\t5,000\t0.146"
       }
     },
     {
@@ -50,11 +50,11 @@
       "unitPriceOriginal": 0.275,
       "uomOriginal": "box",
       "coverage": "quoted",
-      "confidence": 1,
+      "confidence": 0.99,
       "source": {
         "doc": "vendor2_everest_corrugators.pdf",
-        "locationHint": "Line 4",
-        "snippet": "4\\t3-ply Printed Corrugated Box M (310x220x150mm)\\t5,000\\t0.275"
+        "locationHint": "table row 4",
+        "snippet": "4\t3-ply Printed Corrugated Box M (310x220x150mm)\t5,000\t0.275"
       }
     },
     {
@@ -63,11 +63,11 @@
       "unitPriceOriginal": 0.269,
       "uomOriginal": "box",
       "coverage": "quoted",
-      "confidence": 1,
+      "confidence": 0.99,
       "source": {
         "doc": "vendor2_everest_corrugators.pdf",
-        "locationHint": "Line 5",
-        "snippet": "5\\t3-ply Plain Corrugated Box L (400x300x200mm)\\t2,000\\t0.269"
+        "locationHint": "table row 5",
+        "snippet": "5\t3-ply Plain Corrugated Box L (400x300x200mm)\t2,000\t0.269"
       }
     },
     {
@@ -76,11 +76,11 @@
       "unitPriceOriginal": 0.36,
       "uomOriginal": "box",
       "coverage": "quoted",
-      "confidence": 1,
+      "confidence": 0.99,
       "source": {
         "doc": "vendor2_everest_corrugators.pdf",
-        "locationHint": "Line 6",
-        "snippet": "6\\t3-ply Printed Corrugated Box L (400x300x200mm)\\t12,000\\t0.360"
+        "locationHint": "table row 6",
+        "snippet": "6\t3-ply Printed Corrugated Box L (400x300x200mm)\t12,000\t0.360"
       }
     },
     {
@@ -89,11 +89,11 @@
       "unitPriceOriginal": 0.372,
       "uomOriginal": "box",
       "coverage": "quoted",
-      "confidence": 1,
+      "confidence": 0.99,
       "source": {
         "doc": "vendor2_everest_corrugators.pdf",
-        "locationHint": "Line 7",
-        "snippet": "7\\t3-ply Plain Corrugated Box XL (500x350x250mm)\\t2,000\\t0.372"
+        "locationHint": "table row 7",
+        "snippet": "7\t3-ply Plain Corrugated Box XL (500x350x250mm)\t2,000\t0.372"
       }
     },
     {
@@ -102,11 +102,11 @@
       "unitPriceOriginal": 0.496,
       "uomOriginal": "box",
       "coverage": "quoted",
-      "confidence": 1,
+      "confidence": 0.99,
       "source": {
         "doc": "vendor2_everest_corrugators.pdf",
-        "locationHint": "Line 8",
-        "snippet": "8\\t3-ply Printed Corrugated Box XL (500x350x250mm)\\t30,000\\t0.496"
+        "locationHint": "table row 8",
+        "snippet": "8\t3-ply Printed Corrugated Box XL (500x350x250mm)\t30,000\t0.496"
       }
     },
     {
@@ -115,11 +115,11 @@
       "unitPriceOriginal": 0.087,
       "uomOriginal": "box",
       "coverage": "quoted",
-      "confidence": 1,
+      "confidence": 0.99,
       "source": {
         "doc": "vendor2_everest_corrugators.pdf",
-        "locationHint": "Line 9",
-        "snippet": "9\\t5-ply Plain Corrugated Box S (230x160x100mm)\\t15,000\\t0.087"
+        "locationHint": "table row 9",
+        "snippet": "9\t5-ply Plain Corrugated Box S (230x160x100mm)\t15,000\t0.087"
       }
     },
     {
@@ -128,11 +128,11 @@
       "unitPriceOriginal": 0.22,
       "uomOriginal": "box",
       "coverage": "quoted",
-      "confidence": 1,
+      "confidence": 0.99,
       "source": {
         "doc": "vendor2_everest_corrugators.pdf",
-        "locationHint": "Line 10",
-        "snippet": "10\\t5-ply Printed Corrugated Box S (230x160x100mm)\\t2,000\\t0.220"
+        "locationHint": "table row 10",
+        "snippet": "10\t5-ply Printed Corrugated Box S (230x160x100mm)\t2,000\t0.220"
       }
     },
     {
@@ -141,11 +141,11 @@
       "unitPriceOriginal": 0.182,
       "uomOriginal": "box",
       "coverage": "quoted",
-      "confidence": 1,
+      "confidence": 0.99,
       "source": {
         "doc": "vendor2_everest_corrugators.pdf",
-        "locationHint": "Line 11",
-        "snippet": "11\\t5-ply Plain Corrugated Box M (310x220x150mm)\\t8,000\\t0.182"
+        "locationHint": "table row 11",
+        "snippet": "11\t5-ply Plain Corrugated Box M (310x220x150mm)\t8,000\t0.182"
       }
     },
     {
@@ -154,17 +154,303 @@
       "unitPriceOriginal": 0.292,
       "uomOriginal": "box",
       "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "table row 12",
+        "snippet": "12\t5-ply Printed Corrugated Box M (310x220x150mm)\t20,000\t0.292"
+      }
+    },
+    {
+      "lineNo": 13,
+      "rawText": "5-ply Plain Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 0.286,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "table row 13",
+        "snippet": "13\t5-ply Plain Corrugated Box L (400x300x200mm)\t12,000\t0.286"
+      }
+    },
+    {
+      "lineNo": 14,
+      "rawText": "5-ply Printed Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 0.423,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "table row 14",
+        "snippet": "14\t5-ply Printed Corrugated Box L (400x300x200mm)\t20,000\t0.423"
+      }
+    },
+    {
+      "lineNo": 15,
+      "rawText": "5-ply Plain Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 0.408,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "table row 15",
+        "snippet": "15\t5-ply Plain Corrugated Box XL (500x350x250mm)\t30,000\t0.408"
+      }
+    },
+    {
+      "lineNo": 16,
+      "rawText": "5-ply Printed Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 0.519,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "table row 16",
+        "snippet": "16\t5-ply Printed Corrugated Box XL (500x350x250mm)\t20,000\t0.519"
+      }
+    },
+    {
+      "lineNo": 17,
+      "rawText": "7-ply Plain Corrugated Box S (230x160x100mm)",
+      "unitPriceOriginal": 0.113,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "table row 17",
+        "snippet": "17\t7-ply Plain Corrugated Box S (230x160x100mm)\t2,000\t0.113"
+      }
+    },
+    {
+      "lineNo": 18,
+      "rawText": "7-ply Printed Corrugated Box S (230x160x100mm)",
+      "unitPriceOriginal": 0.229,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "table row 18",
+        "snippet": "18\t7-ply Printed Corrugated Box S (230x160x100mm)\t5,000\t0.229"
+      }
+    },
+    {
+      "lineNo": 19,
+      "rawText": "7-ply Plain Corrugated Box M (310x220x150mm)",
+      "unitPriceOriginal": 0.212,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "table row 19",
+        "snippet": "19\t7-ply Plain Corrugated Box M (310x220x150mm)\t30,000\t0.212"
+      }
+    },
+    {
+      "lineNo": 20,
+      "rawText": "7-ply Printed Corrugated Box M (310x220x150mm)",
+      "unitPriceOriginal": 0.291,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "table row 20",
+        "snippet": "20\t7-ply Printed Corrugated Box M (310x220x150mm)\t15,000\t0.291"
+      }
+    },
+    {
+      "lineNo": 21,
+      "rawText": "7-ply Plain Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 0.344,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "table row 21",
+        "snippet": "21\t7-ply Plain Corrugated Box L (400x300x200mm)\t20,000\t0.344"
+      }
+    },
+    {
+      "lineNo": 22,
+      "rawText": "7-ply Printed Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 0.446,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "table row 22",
+        "snippet": "22\t7-ply Printed Corrugated Box L (400x300x200mm)\t5,000\t0.446"
+      }
+    },
+    {
+      "lineNo": 23,
+      "rawText": "7-ply Plain Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 0.46,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "table row 23",
+        "snippet": "23\t7-ply Plain Corrugated Box XL (500x350x250mm)\t12,000\t0.460"
+      }
+    },
+    {
+      "lineNo": 24,
+      "rawText": "7-ply Printed Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 0.599,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "table row 24",
+        "snippet": "24\t7-ply Printed Corrugated Box XL (500x350x250mm)\t5,000\t0.599"
+      }
+    },
+    {
+      "lineNo": 25,
+      "rawText": "9-ply Heavy Duty Bulk Cargo Box (800x600x500mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
       "confidence": 1,
       "source": {
         "doc": "vendor2_everest_corrugators.pdf",
-        "locationHint": "Line 12",
-        "snippet": "12\\t5-ply Printed Corrugated Box M (310x220x150mm)\\t20,000\\t0.292"
+        "locationHint": "Line 25",
+        "snippet": "9-ply Heavy Duty Bulk Cargo Box (800x600x500mm)"
+      }
+    },
+    {
+      "lineNo": 26,
+      "rawText": "Die-Cut Self-Locking Mailer Box S (200x140x70mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "Line 26",
+        "snippet": "Die-Cut Self-Locking Mailer Box S (200x140x70mm)"
+      }
+    },
+    {
+      "lineNo": 27,
+      "rawText": "Die-Cut Self-Locking Mailer Box M (280x200x100mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "Line 27",
+        "snippet": "Die-Cut Self-Locking Mailer Box M (280x200x100mm)"
+      }
+    },
+    {
+      "lineNo": 28,
+      "rawText": "Die-Cut Self-Locking Mailer Box L (350x250x120mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "Line 28",
+        "snippet": "Die-Cut Self-Locking Mailer Box L (350x250x120mm)"
+      }
+    },
+    {
+      "lineNo": 29,
+      "rawText": "Corrugated Partition / Divider Set for Box M (24-cell)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "Line 29",
+        "snippet": "Corrugated Partition / Divider Set for Box M (24-cell)"
+      }
+    },
+    {
+      "lineNo": 30,
+      "rawText": "Heavy Duty Corrugated Pallet Tray (1200x1000x150mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "Line 30",
+        "snippet": "Heavy Duty Corrugated Pallet Tray (1200x1000x150mm)"
       }
     }
   ],
-  "questionnaireAnswers": [],
-  "terms": {},
-  "flags": [],
-  "overallConfidence": 0.9,
-  "extractedAt": "2026-11-13T13:33:22.693Z"
+  "questionnaireAnswers": [
+    {
+      "qId": "q1",
+      "answer": "Yes",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "footer paragraph",
+        "snippet": "ISO 9001:2015 certified."
+      }
+    },
+    {
+      "qId": "q2",
+      "answer": "30",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "footer paragraph",
+        "snippet": "Payment: 30 days net."
+      }
+    },
+    {
+      "qId": "q3",
+      "answer": "10",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "footer paragraph",
+        "snippet": "Lead time: 10 days."
+      }
+    },
+    {
+      "qId": "q4",
+      "answer": "40%",
+      "confidence": 0.99,
+      "source": {
+        "doc": "vendor2_everest_corrugators.pdf",
+        "locationHint": "footer paragraph",
+        "snippet": "Recycled fibre content: 40%."
+      }
+    }
+  ],
+  "terms": {
+    "freight": "Freight billed at actuals.",
+    "paymentDays": 30,
+    "leadTimeDays": 10,
+    "discountNote": "A volume discount of 4% applies on the above rates for any line with annual quantity exceeding 10,000 boxes.",
+    "volumeDiscountPercent": 4,
+    "volumeDiscountThresholdQty": 10000
+  },
+  "flags": [
+    "quoted_in_usd",
+    "priced_per_box",
+    "line_omitted"
+  ],
+  "overallConfidence": 0.98,
+  "extractedAt": "2026-11-13T14:26:35.543Z"
 }

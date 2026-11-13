@@ -11,11 +11,11 @@
       "unitPriceOriginal": 38,
       "uomOriginal": "per_kg",
       "coverage": "quoted",
-      "confidence": 1,
+      "confidence": 0.99,
       "source": {
         "doc": "gupta_email.txt",
-        "locationHint": "email body",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply."
+        "locationHint": "line 5",
+        "snippet": "38/kg for the 3-ply"
       }
     },
     {
@@ -23,12 +23,12 @@
       "rawText": "3-ply Printed Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 38,
       "uomOriginal": "per_kg",
-      "coverage": "ambiguous",
-      "confidence": 0.9,
+      "coverage": "quoted",
+      "confidence": 0.99,
       "source": {
         "doc": "gupta_email.txt",
-        "locationHint": "email body",
-        "snippet": "Printed ones add 10 per box for the plate."
+        "locationHint": "line 5",
+        "snippet": "38/kg for the 3-ply"
       }
     },
     {
@@ -37,11 +37,11 @@
       "unitPriceOriginal": 38,
       "uomOriginal": "per_kg",
       "coverage": "quoted",
-      "confidence": 1,
+      "confidence": 0.99,
       "source": {
         "doc": "gupta_email.txt",
-        "locationHint": "email body",
-        "snippet": "42/kg for the 5-ply boxes, 38/kg for the 3-ply, and 47/kg for 7-ply."
+        "locationHint": "line 5",
+        "snippet": "38/kg for the 3-ply"
       }
     },
     {
@@ -49,18 +49,404 @@
       "rawText": "3-ply Printed Corrugated Box M (310x220x150mm)",
       "unitPriceOriginal": 38,
       "uomOriginal": "per_kg",
-      "coverage": "ambiguous",
-      "confidence": 0.9,
+      "coverage": "quoted",
+      "confidence": 0.99,
       "source": {
         "doc": "gupta_email.txt",
-        "locationHint": "email body",
-        "snippet": "Printed ones add 10 per box for the plate."
+        "locationHint": "line 5",
+        "snippet": "38/kg for the 3-ply"
+      }
+    },
+    {
+      "lineNo": 5,
+      "rawText": "3-ply Plain Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 38,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "38/kg for the 3-ply"
+      }
+    },
+    {
+      "lineNo": 6,
+      "rawText": "3-ply Printed Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 38,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "38/kg for the 3-ply"
+      }
+    },
+    {
+      "lineNo": 7,
+      "rawText": "3-ply Plain Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 38,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "38/kg for the 3-ply"
+      }
+    },
+    {
+      "lineNo": 8,
+      "rawText": "3-ply Printed Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 38,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "38/kg for the 3-ply"
+      }
+    },
+    {
+      "lineNo": 9,
+      "rawText": "5-ply Plain Corrugated Box S (230x160x100mm)",
+      "unitPriceOriginal": 42,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "42/kg for the 5-ply"
+      }
+    },
+    {
+      "lineNo": 10,
+      "rawText": "5-ply Printed Corrugated Box S (230x160x100mm)",
+      "unitPriceOriginal": 42,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "42/kg for the 5-ply"
+      }
+    },
+    {
+      "lineNo": 11,
+      "rawText": "5-ply Plain Corrugated Box M (310x220x150mm)",
+      "unitPriceOriginal": 42,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "42/kg for the 5-ply"
+      }
+    },
+    {
+      "lineNo": 12,
+      "rawText": "5-ply Printed Corrugated Box M (310x220x150mm)",
+      "unitPriceOriginal": 42,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "42/kg for the 5-ply"
+      }
+    },
+    {
+      "lineNo": 13,
+      "rawText": "5-ply Plain Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 42,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "42/kg for the 5-ply"
+      }
+    },
+    {
+      "lineNo": 14,
+      "rawText": "5-ply Printed Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 42,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "42/kg for the 5-ply"
+      }
+    },
+    {
+      "lineNo": 15,
+      "rawText": "5-ply Plain Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 42,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "42/kg for the 5-ply"
+      }
+    },
+    {
+      "lineNo": 16,
+      "rawText": "5-ply Printed Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 42,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "42/kg for the 5-ply"
+      }
+    },
+    {
+      "lineNo": 17,
+      "rawText": "7-ply Plain Corrugated Box S (230x160x100mm)",
+      "unitPriceOriginal": 47,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "47/kg for the 7-ply"
+      }
+    },
+    {
+      "lineNo": 18,
+      "rawText": "7-ply Printed Corrugated Box S (230x160x100mm)",
+      "unitPriceOriginal": 47,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "47/kg for the 7-ply"
+      }
+    },
+    {
+      "lineNo": 19,
+      "rawText": "7-ply Plain Corrugated Box M (310x220x150mm)",
+      "unitPriceOriginal": 47,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "47/kg for the 7-ply"
+      }
+    },
+    {
+      "lineNo": 20,
+      "rawText": "7-ply Printed Corrugated Box M (310x220x150mm)",
+      "unitPriceOriginal": 47,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "47/kg for the 7-ply"
+      }
+    },
+    {
+      "lineNo": 21,
+      "rawText": "7-ply Plain Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 47,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "47/kg for the 7-ply"
+      }
+    },
+    {
+      "lineNo": 22,
+      "rawText": "7-ply Printed Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 47,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "47/kg for the 7-ply"
+      }
+    },
+    {
+      "lineNo": 23,
+      "rawText": "7-ply Plain Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 47,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "47/kg for the 7-ply"
+      }
+    },
+    {
+      "lineNo": 24,
+      "rawText": "7-ply Printed Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 47,
+      "uomOriginal": "per_kg",
+      "coverage": "quoted",
+      "confidence": 0.99,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "47/kg for the 7-ply"
+      }
+    },
+    {
+      "lineNo": 25,
+      "rawText": "9-ply Heavy Duty Bulk Cargo Box (800x600x500mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "Rest of the sizes same as last year's contract"
+      }
+    },
+    {
+      "lineNo": 26,
+      "rawText": "Die-Cut Self-Locking Mailer Box S (200x140x70mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "Rest of the sizes same as last year's contract"
+      }
+    },
+    {
+      "lineNo": 27,
+      "rawText": "Die-Cut Self-Locking Mailer Box M (280x200x100mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "Rest of the sizes same as last year's contract"
+      }
+    },
+    {
+      "lineNo": 28,
+      "rawText": "Die-Cut Self-Locking Mailer Box L (350x250x120mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 5",
+        "snippet": "Rest of the sizes same as last year's contract"
+      }
+    },
+    {
+      "lineNo": 29,
+      "rawText": "Line 29",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "document",
+        "snippet": "Not quoted in document"
+      }
+    },
+    {
+      "lineNo": 30,
+      "rawText": "Line 30",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "document",
+        "snippet": "Not quoted in document"
       }
     }
   ],
-  "questionnaireAnswers": [],
-  "terms": {},
+  "questionnaireAnswers": [
+    {
+      "qId": "q1",
+      "answer": "[object Object]",
+      "confidence": 0,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "Compliance & Terms",
+        "snippet": "[object Object]"
+      }
+    },
+    {
+      "qId": "q2",
+      "answer": 30,
+      "confidence": 1,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 6",
+        "snippet": "payment 30 days"
+      }
+    },
+    {
+      "qId": "q3",
+      "answer": 14,
+      "confidence": 1,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "line 7",
+        "snippet": "Lead time 2 weeks"
+      }
+    },
+    {
+      "qId": "q4",
+      "answer": "[object Object]",
+      "confidence": 0,
+      "source": {
+        "doc": "gupta_email.txt",
+        "locationHint": "Compliance & Terms",
+        "snippet": "[object Object]"
+      }
+    }
+  ],
+  "terms": {
+    "freight": "Freight extra",
+    "paymentDays": 30,
+    "leadTimeDays": 14,
+    "discountNote": null,
+    "volumeDiscountPercent": null,
+    "volumeDiscountThresholdQty": null
+  },
   "flags": [],
   "overallConfidence": 0.9,
-  "extractedAt": "2026-11-13T13:46:27.284Z"
+  "extractedAt": "2026-11-13T14:39:24.894Z"
 }

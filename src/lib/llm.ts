@@ -18,7 +18,6 @@ export interface LLMVisionOptions {
 }
 
 export function getEnv(key: string): string | undefined {
-  if (process.env[key]) return process.env[key];
   try {
     const envPath = path.join(process.cwd(), '.env.local');
     if (fs.existsSync(envPath)) {
@@ -27,7 +26,7 @@ export function getEnv(key: string): string | undefined {
       if (match) return match[1].trim();
     }
   } catch {}
-  return undefined;
+  return process.env[key];
 }
 
 // Groq configuration
@@ -36,8 +35,8 @@ function getGroqConfig() {
   const isGroq = !!getEnv('GROQ_API_KEY');
   const baseUrl = isGroq ? 'https://api.groq.com/openai/v1' : 'https://openrouter.ai/api/v1';
   
-  // Default text model: use env var first, or reliable Groq fallback
-  const defaultTextModel = getEnv('TEXT_MODEL') || 'openai/gpt-oss-20b';
+  // Default text model: use env var first, or available Groq model (openai/gpt-oss-120b)
+  const defaultTextModel = getEnv('TEXT_MODEL') || 'openai/gpt-oss-120b';
   
   // Default vision model: use env var first, or reliable Groq fallback
   const defaultVisionModel = getEnv('VISION_MODEL') || 'meta-llama/llama-4-scout-17b-16e-instruct';
@@ -63,6 +62,56 @@ export async function listAvailableGroqModels(): Promise<{ id: string; active?: 
     console.error('Failed to list models:', e);
     return [];
   }
+}
+
+export async function findBestAvailableGroqTextModel(requestedModel?: string): Promise<string> {
+  const models = await listAvailableGroqModels();
+  const modelIds = models.map(m => m.id);
+
+  if (requestedModel && modelIds.includes(requestedModel)) {
+    return requestedModel;
+  }
+
+  const candidates = [
+    'openai/gpt-oss-120b',
+    'qwen/qwen3.8-27b',
+    'openai/gpt-oss-20b',
+    'allam-2-7b',
+    'llama-3.3-70b-versatile',
+    'llama-3.1-70b-versatile'
+  ];
+
+  for (const cand of candidates) {
+    if (modelIds.includes(cand)) {
+      return cand;
+    }
+  }
+
+  const chatModel = modelIds.find(id => !id.includes('guard') && !id.includes('whisper') && !id.includes('orpheus'));
+  return chatModel || 'openai/gpt-oss-120b';
+}
+
+export async function findBestAvailableGroqVisionModel(requestedModel?: string): Promise<string> {
+  const models = await listAvailableGroqModels();
+  const modelIds = models.map(m => m.id);
+
+  if (requestedModel && modelIds.includes(requestedModel)) {
+    return requestedModel;
+  }
+
+  const candidates = [
+    'llama-3.2-11b-vision-preview',
+    'llama-3.2-90b-vision-preview',
+    'llama-3.2-11b-text-preview'
+  ];
+
+  for (const cand of candidates) {
+    if (modelIds.includes(cand)) {
+      return cand;
+    }
+  }
+
+  return 'llama-3.2-11b-vision-preview';
 }
 
 export async function callLLMText(options: LLMCallOptions): Promise<string> {
@@ -91,6 +140,7 @@ export async function callLLMText(options: LLMCallOptions): Promise<string> {
       { role: 'user', content: options.userPrompt }
     ],
     temperature: options.temperature ?? 0.1,
+    max_tokens: 4000,
   };
 
   if (options.jsonMode) {
@@ -116,53 +166,75 @@ export async function callLLMText(options: LLMCallOptions): Promise<string> {
     }
 
     if (res.status === 429) {
-      const openRouterKey = getEnv('OPENROUTER_API_KEY');
-      if (openRouterKey) {
-        console.warn('Groq rate limit (429) hit. Seamlessly routing to OpenRouter...');
-        try {
-          const orRes = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-              'Authorization': `Bearer ${openRouterKey}`,
-              'Content-Type': 'application/json',
-              'HTTP-Referer': 'http://localhost:3000',
-              'X-Title': 'Aerchain RFx Analyzer',
-            },
-            body: JSON.stringify({
-              ...body,
-              model: 'meta-llama/llama-3.3-70b-instruct',
-            }),
-          });
-          if (orRes.ok) {
-            const orJson = await orRes.json();
-            const orChoice = orJson.choices?.[0];
-            if (orChoice?.message?.content) {
-              return orChoice.message.content.trim();
-            }
-          }
-        } catch (orErr) {
-          console.error('OpenRouter fallback failed:', orErr);
+      if (parsedMessage.toLowerCase().includes('too large')) {
+        console.warn('Request too large for current model. Falling back to qwen/qwen3.8-27b...');
+        const altBody = { ...body, model: 'qwen/qwen3.8-27b', max_tokens: 3500 };
+        const altRes = await fetch(`${baseUrl}/chat/completions`, {
+          method: 'POST', headers, body: JSON.stringify(altBody),
+        });
+        if (altRes.ok) {
+          const altJson = await altRes.json();
+          const c = altJson.choices?.[0];
+          if (c?.message?.content) return c.message.content.trim();
         }
       }
 
-      console.warn(`Rate limit reached (429). Waiting 15 seconds before retrying...`);
-      await new Promise(r => setTimeout(r, 15000));
+      const retryHeader = res.headers.get('retry-after');
+      let waitSeconds = retryHeader ? parseInt(retryHeader, 10) : 0;
+      if (!waitSeconds || isNaN(waitSeconds)) {
+        const match = parsedMessage.match(/try again in ([0-9.]+)(s|ms)/i);
+        if (match) {
+          waitSeconds = match[2].toLowerCase() === 'ms'
+            ? Math.ceil(parseFloat(match[1]) / 1000)
+            : Math.ceil(parseFloat(match[1]));
+        }
+      }
+      const waitTime = Math.max((waitSeconds || 25) + 3, 25);
+      console.warn(`Groq rate limit (429). Waiting ${waitTime}s before retrying...`);
+      await new Promise(r => setTimeout(r, waitTime * 1000));
       const retryRes = await fetch(`${baseUrl}/chat/completions`, {
-        method: 'POST',
-        headers,
-        body: JSON.stringify(body),
+        method: 'POST', headers, body: JSON.stringify(body),
       });
       if (retryRes.ok) {
         const retryJson = await retryRes.json();
-        const retryChoice = retryJson.choices?.[0];
-        if (retryChoice?.message?.content) {
-          return retryChoice.message.content.trim();
-        }
+        const c = retryJson.choices?.[0];
+        if (c?.message?.content) return c.message.content.trim();
       }
-      throw new Error(`Rate limit reached (429): ${parsedMessage}`);
+      if (retryRes.status === 429) {
+        console.warn('Groq rate limit (429) second hit. Waiting 30s...');
+        await new Promise(r => setTimeout(r, 30000));
+        const retryRes2 = await fetch(`${baseUrl}/chat/completions`, {
+          method: 'POST', headers, body: JSON.stringify(body),
+        });
+        if (retryRes2.ok) {
+          const retryJson2 = await retryRes2.json();
+          const c2 = retryJson2.choices?.[0];
+          if (c2?.message?.content) return c2.message.content.trim();
+        }
+        const err2 = await retryRes2.text();
+        throw new Error(`Rate limit reached (429) after retry: ${err2}`);
+      }
+      const retryErr = await retryRes.text();
+      throw new Error(`Rate limit reached (429): ${retryErr || parsedMessage}`);
     }
 
     if (res.status === 404 || errorCode === 'model_not_found') {
+      console.warn(`Model '${model}' not found (404) on Groq. Finding best available model...`);
+      const fallback = await findBestAvailableGroqTextModel();
+      if (fallback && fallback !== model) {
+        console.warn(`Retrying with available Groq model: '${fallback}'...`);
+        const retryBody = { ...body, model: fallback };
+        const retryRes = await fetch(`${baseUrl}/chat/completions`, {
+          method: 'POST',
+          headers,
+          body: JSON.stringify(retryBody),
+        });
+        if (retryRes.ok) {
+          const retryJson = await retryRes.json();
+          const c = retryJson.choices?.[0];
+          if (c?.message?.content) return c.message.content.trim();
+        }
+      }
       throw new Error(`Model '${model}' not found (404): ${parsedMessage}`);
     }
 
@@ -179,20 +251,19 @@ export async function callLLMText(options: LLMCallOptions): Promise<string> {
 }
 
 export async function callLLMVision(options: LLMVisionOptions): Promise<string> {
-  const openRouterKey = getEnv('OPENROUTER_API_KEY');
-  const groqKey = getEnv('GROQ_API_KEY');
-  
-  // Use OpenRouter if configured, otherwise Groq
-  const useOpenRouter = !!openRouterKey;
-  const apiKey = useOpenRouter ? openRouterKey : groqKey;
+  const apiKey = getEnv('GROQ_API_KEY') || getEnv('OPENROUTER_API_KEY');
+  const useOpenRouter = !getEnv('GROQ_API_KEY') && !!getEnv('OPENROUTER_API_KEY');
   const baseUrl = useOpenRouter ? 'https://openrouter.ai/api/v1' : 'https://api.groq.com/openai/v1';
-  const defaultVisionModel = getEnv('VISION_MODEL') || (useOpenRouter ? 'meta-llama/llama-4-scout-17b-16e-instruct' : 'llama-3.2-11b-vision-preview');
+  const defaultVisionModel = getEnv('VISION_MODEL') || 'meta-llama/llama-4-scout-17b-16e-instruct';
 
   if (!apiKey) {
     throw new Error('Neither OPENROUTER_API_KEY nor GROQ_API_KEY is configured in .env.local.');
   }
 
-  const model = options.model || defaultVisionModel;
+  let model = options.model || defaultVisionModel;
+  if (!useOpenRouter && (model.includes('llama-4') || model.includes('scout') || model.includes('meta-llama/'))) {
+    model = await findBestAvailableGroqVisionModel();
+  }
   const mime = options.imageMimeType || 'image/jpeg';
   const dataUrl = options.imageBase64.startsWith('data:') 
     ? options.imageBase64 
@@ -208,29 +279,42 @@ export async function callLLMVision(options: LLMVisionOptions): Promise<string> 
     headers['X-Title'] = 'Aerchain RFx Analyzer';
   }
 
-  const res = await fetch(`${baseUrl}/chat/completions`, {
+  const visionBody = {
+    model,
+    messages: [
+      { role: 'system', content: options.systemPrompt },
+      {
+        role: 'user',
+        content: [
+          { type: 'text', text: options.userPrompt },
+          {
+            type: 'image_url',
+            image_url: {
+              url: dataUrl
+            }
+          }
+        ]
+      }
+    ],
+    temperature: 0.1,
+    max_tokens: 8000,
+  };
+
+  let res = await fetch(`${baseUrl}/chat/completions`, {
     method: 'POST',
     headers,
-    body: JSON.stringify({
-      model,
-      messages: [
-        { role: 'system', content: options.systemPrompt },
-        {
-          role: 'user',
-          content: [
-            { type: 'text', text: options.userPrompt },
-            {
-              type: 'image_url',
-              image_url: {
-                url: dataUrl
-              }
-            }
-          ]
-        }
-      ],
-      temperature: 0.1,
-    }),
+    body: JSON.stringify(visionBody),
   });
+
+  if (res.status === 429) {
+    console.warn('Groq vision rate limit (429). Waiting 25s before retry...');
+    await new Promise(r => setTimeout(r, 25000));
+    res = await fetch(`${baseUrl}/chat/completions`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify(visionBody),
+    });
+  }
 
   if (!res.ok) {
     const errorText = await res.text();

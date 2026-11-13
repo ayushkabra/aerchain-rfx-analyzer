@@ -7,34 +7,451 @@
   "lineQuotes": [
     {
       "lineNo": 1,
-      "rawText": "3-ply Plain Box Small (230x160x100mm)",
+      "rawText": "3-ply Plain Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 7.5,
       "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor1_shakti_packaging.xlsx",
-        "locationHint": "Row 2",
-        "snippet": "[Row 2] Internal SKU: \"SHK-3P-S-PL\" | Item Description: \"3-ply Plain Box Small (230x160x100mm)\" | Ply: \"3\" | Finish: \"Plain\" | Offered Price (INR/Box): \"7.5\" | Annual Capacity (Pcs): \"2000\" | MOQ: \"500\" | Remarks: \"Standard kraft liner\""
+        "locationHint": "Commercial Quote!Row 2",
+        "snippet": "Offered Price (INR/Box): \"7.5\""
       }
     },
     {
       "lineNo": 2,
-      "rawText": "3-ply Printed Box Small (230x160x100mm)",
+      "rawText": "3-ply Printed Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 16.8,
       "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor1_shakti_packaging.xlsx",
-        "locationHint": "Row 3",
-        "snippet": "[Row 3] Internal SKU: \"SHK-3P-S-PR\" | Item Description: \"3-ply Printed Box Small (230x160x100mm)\" | Ply: \"3\" | Finish: \"Printed\" | Offered Price (INR/Box): \"16.8\" | Annual Capacity (Pcs): \"12000\" | MOQ: \"2000\" | Remarks: \"2-colour flexo\""
+        "locationHint": "Commercial Quote!Row 3",
+        "snippet": "Offered Price (INR/Box): \"16.8\""
+      }
+    },
+    {
+      "lineNo": 3,
+      "rawText": "3-ply Plain Corrugated Box M (310x220x150mm)",
+      "unitPriceOriginal": 11.8,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 4",
+        "snippet": "Offered Price (INR/Box): \"11.8\""
+      }
+    },
+    {
+      "lineNo": 4,
+      "rawText": "3-ply Printed Corrugated Box M (310x220x150mm)",
+      "unitPriceOriginal": 22.4,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 5",
+        "snippet": "Offered Price (INR/Box): \"22.4\""
+      }
+    },
+    {
+      "lineNo": 5,
+      "rawText": "3-ply Plain Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 21.9,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 6",
+        "snippet": "Offered Price (INR/Box): \"21.9\""
+      }
+    },
+    {
+      "lineNo": 6,
+      "rawText": "3-ply Printed Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 29.5,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 7",
+        "snippet": "Offered Price (INR/Box): \"29.5\""
+      }
+    },
+    {
+      "lineNo": 7,
+      "rawText": "3-ply Plain Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 30.2,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 8",
+        "snippet": "Offered Price (INR/Box): \"30.2\""
+      }
+    },
+    {
+      "lineNo": 8,
+      "rawText": "3-ply Printed Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 40.5,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 9",
+        "snippet": "Offered Price (INR/Box): \"40.5\""
+      }
+    },
+    {
+      "lineNo": 9,
+      "rawText": "5-ply Plain Corrugated Box S (230x160x100mm)",
+      "unitPriceOriginal": 7.1,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 10",
+        "snippet": "Offered Price (INR/Box): \"7.1\""
+      }
+    },
+    {
+      "lineNo": 10,
+      "rawText": "5-ply Printed Corrugated Box S (230x160x100mm)",
+      "unitPriceOriginal": 18.2,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 11",
+        "snippet": "Offered Price (INR/Box): \"18.2\""
+      }
+    },
+    {
+      "lineNo": 11,
+      "rawText": "5-ply Plain Corrugated Box M (310x220x150mm)",
+      "unitPriceOriginal": 14.9,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 12",
+        "snippet": "Offered Price (INR/Box): \"14.9\""
+      }
+    },
+    {
+      "lineNo": 12,
+      "rawText": "5-ply Printed Corrugated Box M (310x220x150mm)",
+      "unitPriceOriginal": 24.1,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 13",
+        "snippet": "Offered Price (INR/Box): \"24.1\""
+      }
+    },
+    {
+      "lineNo": 13,
+      "rawText": "5-ply Plain Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 23.5,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 14",
+        "snippet": "Offered Price (INR/Box): \"23.5\""
+      }
+    },
+    {
+      "lineNo": 14,
+      "rawText": "5-ply Printed Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 34.8,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 15",
+        "snippet": "Offered Price (INR/Box): \"34.8\""
+      }
+    },
+    {
+      "lineNo": 15,
+      "rawText": "5-ply Plain Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 33.6,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 16",
+        "snippet": "Offered Price (INR/Box): \"33.6\""
+      }
+    },
+    {
+      "lineNo": 16,
+      "rawText": "5-ply Printed Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 42.9,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 17",
+        "snippet": "Offered Price (INR/Box): \"42.9\""
+      }
+    },
+    {
+      "lineNo": 17,
+      "rawText": "7-ply Plain Corrugated Box S (230x160x100mm)",
+      "unitPriceOriginal": 9.4,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 18",
+        "snippet": "Offered Price (INR/Box): \"9.4\""
+      }
+    },
+    {
+      "lineNo": 18,
+      "rawText": "7-ply Printed Corrugated Box S (230x160x100mm)",
+      "unitPriceOriginal": 18.9,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 19",
+        "snippet": "Offered Price (INR/Box): \"18.9\""
+      }
+    },
+    {
+      "lineNo": 19,
+      "rawText": "7-ply Plain Corrugated Box M (310x220x150mm)",
+      "unitPriceOriginal": 17.5,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 20",
+        "snippet": "Offered Price (INR/Box): \"17.5\""
+      }
+    },
+    {
+      "lineNo": 20,
+      "rawText": "7-ply Printed Corrugated Box M (310x220x150mm)",
+      "unitPriceOriginal": 24.2,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 21",
+        "snippet": "Offered Price (INR/Box): \"24.2\""
+      }
+    },
+    {
+      "lineNo": 21,
+      "rawText": "7-ply Plain Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 28.3,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 22",
+        "snippet": "Offered Price (INR/Box): \"28.3\""
+      }
+    },
+    {
+      "lineNo": 22,
+      "rawText": "7-ply Printed Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 36.9,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 23",
+        "snippet": "Offered Price (INR/Box): \"36.9\""
+      }
+    },
+    {
+      "lineNo": 23,
+      "rawText": "7-ply Plain Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 38,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 24",
+        "snippet": "Offered Price (INR/Box): \"38\""
+      }
+    },
+    {
+      "lineNo": 24,
+      "rawText": "7-ply Printed Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 49.8,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote!Row 25",
+        "snippet": "Offered Price (INR/Box): \"49.8\""
+      }
+    },
+    {
+      "lineNo": 25,
+      "rawText": "9-ply Heavy Duty Bulk Cargo Box (800x600x500mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 0,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote",
+        "snippet": "9-ply Heavy Duty Bulk Cargo Box (800x600x500mm)"
+      }
+    },
+    {
+      "lineNo": 26,
+      "rawText": "Die-Cut Self-Locking Mailer Box S (200x140x70mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 0,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote",
+        "snippet": "Die-Cut Self-Locking Mailer Box S (200x140x70mm)"
+      }
+    },
+    {
+      "lineNo": 27,
+      "rawText": "Die-Cut Self-Locking Mailer Box M (280x200x100mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 0,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote",
+        "snippet": "Die-Cut Self-Locking Mailer Box M (280x200x100mm)"
+      }
+    },
+    {
+      "lineNo": 28,
+      "rawText": "Die-Cut Self-Locking Mailer Box L (350x250x120mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 0,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote",
+        "snippet": "Die-Cut Self-Locking Mailer Box L (350x250x120mm)"
+      }
+    },
+    {
+      "lineNo": 29,
+      "rawText": "Corrugated Partition / Divider Set for Box M (24-cell)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 0,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote",
+        "snippet": "Corrugated Partition / Divider Set for Box M (24-cell)"
+      }
+    },
+    {
+      "lineNo": 30,
+      "rawText": "Heavy Duty Corrugated Pallet Tray (1200x1000x150mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 0,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Commercial Quote",
+        "snippet": "Heavy Duty Corrugated Pallet Tray (1200x1000x150mm)"
       }
     }
   ],
-  "questionnaireAnswers": [],
-  "terms": {},
-  "flags": [],
-  "overallConfidence": 0.9,
-  "extractedAt": "2026-11-13T13:33:09.247Z"
+  "questionnaireAnswers": [
+    {
+      "qId": "q1",
+      "answer": "Yes",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Compliance & Terms!Row 3",
+        "snippet": "ISO 9001:2015 Certified: \"Yes (Certificate No: ISO-9001-2023-SHK)\""
+      }
+    },
+    {
+      "qId": "q2",
+      "answer": "45",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Compliance & Terms!Row 4",
+        "snippet": "Standard Payment Terms: \"45 days from invoice date\""
+      }
+    },
+    {
+      "qId": "q3",
+      "answer": "7",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Compliance & Terms!Row 5",
+        "snippet": "Repeat Order Lead Time: \"7 days\""
+      }
+    },
+    {
+      "qId": "q4",
+      "answer": "55",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor1_shakti_packaging.xlsx",
+        "locationHint": "Compliance & Terms!Row 6",
+        "snippet": "Recycled Fibre Content (%): \"55%\""
+      }
+    }
+  ],
+  "terms": {
+    "freight": "Freight included for deliveries in NCR; ₹1.20/box extra outside NCR",
+    "paymentDays": 45,
+    "leadTimeDays": 7,
+    "discountNote": null,
+    "volumeDiscountPercent": null,
+    "volumeDiscountThresholdQty": null
+  },
+  "flags": [
+    "quoted_in_inr",
+    "uom_box",
+    "line_omitted",
+    "answered_questions"
+  ],
+  "overallConfidence": 0.98,
+  "extractedAt": "2026-11-13T14:25:22.734Z"
 }

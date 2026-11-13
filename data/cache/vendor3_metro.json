@@ -9,175 +9,444 @@
       "lineNo": 1,
       "rawText": "3-ply Plain Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 7.8,
-      "uomOriginal": "piece",
+      "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor3_metro_pack.txt",
-        "locationHint": "COMMERCIAL RATES section",
-        "snippet": "For 3-ply small boxes (230x160x100mm), our rate is Rs. 7.80 per box for plain"
+        "locationHint": "COMMERCIAL RATES - 3-ply small boxes",
+        "snippet": "our rate is Rs. 7.80 per box for plain"
       }
     },
     {
       "lineNo": 2,
       "rawText": "3-ply Printed Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 17.5,
-      "uomOriginal": "piece",
+      "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor3_metro_pack.txt",
-        "locationHint": "COMMERCIAL RATES section",
-        "snippet": "For 3-ply small boxes (230x160x100mm), our rate is Rs. 7.80 per box for plain, and Rs. 17.50 per box for printed"
+        "locationHint": "COMMERCIAL RATES - 3-ply small boxes",
+        "snippet": "Rs. 17.50 per box for printed"
       }
     },
     {
       "lineNo": 3,
       "rawText": "3-ply Plain Corrugated Box M (310x220x150mm)",
       "unitPriceOriginal": 12.2,
-      "uomOriginal": "piece",
+      "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor3_metro_pack.txt",
-        "locationHint": "COMMERCIAL RATES section",
-        "snippet": "For 3-ply medium boxes (310x220x150mm), we quote Rs. 12.20 per box for plain"
+        "locationHint": "COMMERCIAL RATES - 3-ply medium boxes",
+        "snippet": "Rs. 12.20 per box for plain"
       }
     },
     {
       "lineNo": 4,
       "rawText": "3-ply Printed Corrugated Box M (310x220x150mm)",
       "unitPriceOriginal": 23,
-      "uomOriginal": "piece",
+      "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor3_metro_pack.txt",
-        "locationHint": "COMMERCIAL RATES section",
-        "snippet": "For 3-ply medium boxes (310x220x150mm), we quote Rs. 12.20 per box for plain, and Rs. 23.00 per box for printed"
+        "locationHint": "COMMERCIAL RATES - 3-ply medium boxes",
+        "snippet": "Rs. 23.00 per box for printed"
       }
     },
     {
       "lineNo": 5,
       "rawText": "3-ply Plain Corrugated Box L (400x300x200mm)",
       "unitPriceOriginal": 22.5,
-      "uomOriginal": "piece",
+      "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor3_metro_pack.txt",
-        "locationHint": "COMMERCIAL RATES section",
-        "snippet": "For 3-ply large cartons (400x300x200mm), rate is Rs. 22.50 per box plain"
+        "locationHint": "COMMERCIAL RATES - 3-ply large cartons",
+        "snippet": "Rs. 22.50 per box plain"
       }
     },
     {
       "lineNo": 6,
       "rawText": "3-ply Printed Corrugated Box L (400x300x200mm)",
       "unitPriceOriginal": 30.5,
-      "uomOriginal": "piece",
+      "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor3_metro_pack.txt",
-        "locationHint": "COMMERCIAL RATES section",
-        "snippet": "For 3-ply large cartons (400x300x200mm), rate is Rs. 22.50 per box plain, and Rs. 30.50 per box printed"
+        "locationHint": "COMMERCIAL RATES - 3-ply large cartons",
+        "snippet": "Rs. 30.50 per box printed"
       }
     },
     {
       "lineNo": 7,
       "rawText": "3-ply Plain Corrugated Box XL (500x350x250mm)",
       "unitPriceOriginal": 31,
-      "uomOriginal": "piece",
+      "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor3_metro_pack.txt",
-        "locationHint": "COMMERCIAL RATES section",
-        "snippet": "For 3-ply extra large boxes (500x350x250mm), rate is Rs. 31.00 per box plain"
+        "locationHint": "COMMERCIAL RATES - 3-ply extra large boxes",
+        "snippet": "Rs. 31.00 per box plain"
       }
     },
     {
       "lineNo": 8,
       "rawText": "3-ply Printed Corrugated Box XL (500x350x250mm)",
       "unitPriceOriginal": 41.5,
-      "uomOriginal": "piece",
+      "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor3_metro_pack.txt",
-        "locationHint": "COMMERCIAL RATES section",
-        "snippet": "For 3-ply extra large boxes (500x350x250mm), rate is Rs. 31.00 per box plain, and Rs. 41.50 per box printed"
+        "locationHint": "COMMERCIAL RATES - 3-ply extra large boxes",
+        "snippet": "Rs. 41.50 per box printed"
       }
     },
     {
       "lineNo": 9,
       "rawText": "5-ply Plain Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 7.2,
-      "uomOriginal": "piece",
+      "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor3_metro_pack.txt",
-        "locationHint": "COMMERCIAL RATES section",
-        "snippet": "Small size (230x160x100mm) is Rs. 7.20 per box plain"
+        "locationHint": "COMMERCIAL RATES - 5-ply small size",
+        "snippet": "Rs. 7.20 per box plain"
       }
     },
     {
       "lineNo": 10,
       "rawText": "5-ply Printed Corrugated Box S (230x160x100mm)",
       "unitPriceOriginal": 19,
-      "uomOriginal": "piece",
+      "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor3_metro_pack.txt",
-        "locationHint": "COMMERCIAL RATES section",
-        "snippet": "Small size (230x160x100mm) is Rs. 7.20 per box plain, and Rs. 19.00 per box printed"
+        "locationHint": "COMMERCIAL RATES - 5-ply small size",
+        "snippet": "Rs. 19.00 per box printed"
       }
     },
     {
       "lineNo": 11,
       "rawText": "5-ply Plain Corrugated Box M (310x220x150mm)",
       "unitPriceOriginal": 15.2,
-      "uomOriginal": "piece",
+      "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor3_metro_pack.txt",
-        "locationHint": "COMMERCIAL RATES section",
-        "snippet": "Medium size (310x220x150mm) is Rs. 15.20 per box plain"
+        "locationHint": "COMMERCIAL RATES - 5-ply medium size",
+        "snippet": "Rs. 15.20 per box plain"
       }
     },
     {
       "lineNo": 12,
       "rawText": "5-ply Printed Corrugated Box M (310x220x150mm)",
       "unitPriceOriginal": 24.8,
-      "uomOriginal": "piece",
+      "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor3_metro_pack.txt",
-        "locationHint": "COMMERCIAL RATES section",
-        "snippet": "Medium size (310x220x150mm) is Rs. 15.20 per box plain, and Rs. 24.80 per box printed"
+        "locationHint": "COMMERCIAL RATES - 5-ply medium size",
+        "snippet": "Rs. 24.80 per box printed"
       }
     },
     {
       "lineNo": 13,
       "rawText": "5-ply Plain Corrugated Box L (400x300x200mm)",
       "unitPriceOriginal": 24.5,
-      "uomOriginal": "piece",
+      "uomOriginal": "box",
       "coverage": "quoted",
       "confidence": 1,
       "source": {
         "doc": "vendor3_metro_pack.txt",
-        "locationHint": "COMMERCIAL RATES section",
-        "snippet": "Large size (400x300x200mm) plain is Rs. 24.50 per box"
+        "locationHint": "COMMERCIAL RATES - 5-ply large size",
+        "snippet": "plain is Rs. 24.50 per box"
+      }
+    },
+    {
+      "lineNo": 14,
+      "rawText": "5-ply Printed Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL RATES - 5-ply large size",
+        "snippet": "We do not have machine capacity to quote for 5-ply Printed Large box line 14"
+      }
+    },
+    {
+      "lineNo": 15,
+      "rawText": "5-ply Plain Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 3500,
+      "uomOriginal": "per_100",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL RATES - 5-ply extra large boxes",
+        "snippet": "plain boxes are quoted at Rs. 3,500 per 100 nos"
+      }
+    },
+    {
+      "lineNo": 16,
+      "rawText": "5-ply Printed Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 4350,
+      "uomOriginal": "per_100",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL RATES - 5-ply extra large boxes",
+        "snippet": "Printed XL boxes are quoted at Rs. 4,350 per 100 nos"
+      }
+    },
+    {
+      "lineNo": 17,
+      "rawText": "7-ply Plain Corrugated Box S (230x160x100mm)",
+      "unitPriceOriginal": 10.2,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL RATES - 7-ply small",
+        "snippet": "Rs. 10.20 per box plain"
+      }
+    },
+    {
+      "lineNo": 18,
+      "rawText": "7-ply Printed Corrugated Box S (230x160x100mm)",
+      "unitPriceOriginal": 19.5,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL RATES - 7-ply small",
+        "snippet": "Rs. 19.50 per box printed"
+      }
+    },
+    {
+      "lineNo": 19,
+      "rawText": "7-ply Plain Corrugated Box M (310x220x150mm)",
+      "unitPriceOriginal": 18.2,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL RATES - 7-ply medium",
+        "snippet": "Rs. 18.20 per box plain"
+      }
+    },
+    {
+      "lineNo": 20,
+      "rawText": "7-ply Printed Corrugated Box M (310x220x150mm)",
+      "unitPriceOriginal": 25,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL RATES - 7-ply medium",
+        "snippet": "Rs. 25.00 per box printed"
+      }
+    },
+    {
+      "lineNo": 21,
+      "rawText": "7-ply Plain Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": 29,
+      "uomOriginal": "box",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL RATES - 7-ply large",
+        "snippet": "plain is Rs. 29.00 per box"
+      }
+    },
+    {
+      "lineNo": 22,
+      "rawText": "7-ply Printed Corrugated Box L (400x300x200mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL RATES - 7-ply large",
+        "snippet": "7-ply Printed Large line 22 is omitted/not quoted"
+      }
+    },
+    {
+      "lineNo": 23,
+      "rawText": "7-ply Plain Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 3900,
+      "uomOriginal": "per_100",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL RATES - 7-ply extra large",
+        "snippet": "plain is Rs. 3,900 per 100 nos"
+      }
+    },
+    {
+      "lineNo": 24,
+      "rawText": "7-ply Printed Corrugated Box XL (500x350x250mm)",
+      "unitPriceOriginal": 5200,
+      "uomOriginal": "per_100",
+      "coverage": "quoted",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL RATES - 7-ply extra large",
+        "snippet": "Printed 7-ply XL is Rs. 5,200 per 100 nos"
+      }
+    },
+    {
+      "lineNo": 25,
+      "rawText": "9-ply Heavy Duty Bulk Cargo Box (800x600x500mm)",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL RATES",
+        "snippet": "No quote provided for 9-ply Heavy Duty Bulk Cargo Box"
+      }
+    },
+    {
+      "lineNo": 26,
+      "rawText": "Line 26",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "document",
+        "snippet": "Not quoted in document"
+      }
+    },
+    {
+      "lineNo": 27,
+      "rawText": "Line 27",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "document",
+        "snippet": "Not quoted in document"
+      }
+    },
+    {
+      "lineNo": 28,
+      "rawText": "Line 28",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "document",
+        "snippet": "Not quoted in document"
+      }
+    },
+    {
+      "lineNo": 29,
+      "rawText": "Line 29",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "document",
+        "snippet": "Not quoted in document"
+      }
+    },
+    {
+      "lineNo": 30,
+      "rawText": "Line 30",
+      "unitPriceOriginal": null,
+      "uomOriginal": "box",
+      "coverage": "missing",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "document",
+        "snippet": "Not quoted in document"
       }
     }
   ],
-  "questionnaireAnswers": [],
-  "terms": {},
+  "questionnaireAnswers": [
+    {
+      "qId": "q1",
+      "answer": "Yes",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL TERMS & QUESTIONNAIRE",
+        "snippet": "ISO 9001:2015: Yes, certified by TUV Nord."
+      }
+    },
+    {
+      "qId": "q2",
+      "answer": 60,
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL TERMS & QUESTIONNAIRE",
+        "snippet": "Payment Terms: 60 days net."
+      }
+    },
+    {
+      "qId": "q3",
+      "answer": 12,
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL TERMS & QUESTIONNAIRE",
+        "snippet": "Delivery Lead Time: 12 working days from confirmed PO."
+      }
+    },
+    {
+      "qId": "q4",
+      "answer": "35%",
+      "confidence": 1,
+      "source": {
+        "doc": "vendor3_metro_pack.txt",
+        "locationHint": "COMMERCIAL TERMS & QUESTIONNAIRE",
+        "snippet": "Recycled Content: 35% recycled kraft testliner."
+      }
+    }
+  ],
+  "terms": {
+    "freight": "Extra at ₹1.50 per box or at actual transporter docket",
+    "paymentDays": 60,
+    "leadTimeDays": 12,
+    "discountNote": null,
+    "volumeDiscountPercent": null,
+    "volumeDiscountThresholdQty": null
+  },
   "flags": [],
   "overallConfidence": 0.9,
-  "extractedAt": "2026-11-13T13:49:17.147Z"
+  "extractedAt": "2026-11-13T14:35:52.052Z"
 }
