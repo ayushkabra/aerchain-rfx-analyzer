@@ -114,28 +114,36 @@ export const LineQuotesArraySchema = z.preprocess((val) => {
   });
 }, z.array(LineQuoteSchema));
 
-// Preprocessed Questionnaire Answers (handles object dictionary or array)
-export const QuestionnaireAnswersArraySchema = z.preprocess((val) => {
-  if (val && typeof val === 'object' && !Array.isArray(val)) {
-    return Object.entries(val).map(([qId, item]: [string, any]) => {
-      if (typeof item === 'object' && item !== null) {
-        return {
-          qId,
-          questionText: item.questionText,
-          answer: item.answer ?? item.value ?? item.response ?? String(item),
-          confidence: typeof item.confidence === 'number' ? item.confidence : 0.9,
-          source: item.source || { doc: 'document', locationHint: 'terms', snippet: String(item.answer ?? item) }
-        };
-      }
-      return {
-        qId,
-        answer: item,
-        confidence: 0.9,
-        source: { doc: 'document', locationHint: 'terms', snippet: String(item) }
-      };
-    });
+function toPrimitiveAnswer(a: any): string | number | boolean | null {
+  if (a === null || a === undefined) return null;
+  if (typeof a === 'object') {
+    const inner = a.answer ?? a.value ?? a.response ?? a.text;
+    return inner === undefined || typeof inner === 'object' ? null : inner;
   }
-  return Array.isArray(val) ? val : [];
+  if (typeof a === 'string' && a.trim().toLowerCase() === '[object object]') return null;
+  return a;
+}
+
+export const QuestionnaireAnswersArraySchema = z.preprocess((val) => {
+  const toItem = (qId: string, item: any) => {
+    if (item && typeof item === 'object') {
+      return {
+        qId: item.qId || qId,
+        questionText: item.questionText,
+        answer: toPrimitiveAnswer(item.answer !== undefined ? item.answer : item),
+        confidence: typeof item.confidence === 'number' ? item.confidence : 0.9,
+        source: item.source || { doc: 'document', locationHint: 'terms', snippet: '' },
+      };
+    }
+    return { qId, answer: toPrimitiveAnswer(item), confidence: 0.9, source: { doc: 'document', locationHint: 'terms', snippet: '' } };
+  };
+  if (val && typeof val === 'object' && !Array.isArray(val)) {
+    return Object.entries(val).map(([qId, item]) => toItem(qId, item));
+  }
+  if (Array.isArray(val)) {
+    return val.map((item: any, i: number) => toItem(item?.qId || `q${i + 1}`, item));
+  }
+  return [];
 }, z.array(QuestionnaireAnswerSchema));
 
 export const VendorResponseSchema = z.object({

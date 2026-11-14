@@ -170,19 +170,28 @@ export function sanitizeRawVendorJson(raw: any, fileName: string, vendorId: stri
       if (conf > 1 && conf <= 100) conf = conf / 100;
       conf = Math.max(0, Math.min(1, conf));
 
+      let answerVal = item.answer !== undefined ? item.answer : (item.value ?? item.response);
+      if (typeof answerVal === 'object' && answerVal !== null) {
+        const inner = answerVal.answer ?? answerVal.value ?? answerVal.response ?? answerVal.text;
+        answerVal = inner === undefined || typeof inner === 'object' ? null : inner;
+      }
+      if (typeof answerVal === 'string' && answerVal.trim().toLowerCase() === '[object object]') {
+        answerVal = null;
+      }
+
       return {
         qId: String(qId),
         questionText: item.questionText || item.question,
-        answer: item.answer ?? item.value ?? item.response ?? String(item),
+        answer: answerVal ?? null,
         confidence: conf,
         source: item.source && typeof item.source === 'object' ? {
           doc: item.source.doc || fileName,
           locationHint: item.source.locationHint || 'Compliance & Terms',
-          snippet: item.source.snippet || String(item.answer ?? item),
+          snippet: item.source.snippet || (typeof answerVal === 'string' ? answerVal : ''),
         } : {
           doc: fileName,
           locationHint: 'Compliance & Terms',
-          snippet: String(item.answer ?? item),
+          snippet: typeof answerVal === 'string' ? answerVal : '',
         }
       };
     });

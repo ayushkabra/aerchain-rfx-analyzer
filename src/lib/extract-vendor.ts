@@ -96,7 +96,7 @@ export async function extractVendorFromImage(params: {
 }): Promise<VendorResponse> {
   const { imageBase64, imageMimeType = 'image/jpeg', rfx, vendorId, sourceFileName } = params;
   const systemPrompt = `${EXTRACTION_RULES}
-This document is a PHOTOGRAPH of a printed paper rate card, taken at an angle. Some rows may be faint, blurred, skewed, or cut off. Read only what you can actually see. If a row's price is not clearly legible, LOWER its confidence and set coverage="ambiguous" (or "missing" if you truly cannot read it). Never substitute a guessed number for one you cannot read.`;
+This document is a PHOTOGRAPH of a printed paper rate card, taken at an angle. Some rows may be faint, blurred, skewed, or cut off. Read only what you can actually see. If a row's price is not clearly legible, LOWER its confidence and set coverage="ambiguous" (or "missing" if you truly cannot read it). Never substitute a guessed number for one you cannot read. Assign confidence by how clearly you can actually read each row: crisp, dark, sharp text → 0.9-1.0. Light, greyed, faded, or blurred ink where you are partly guessing the digit → 0.3-0.6 and set coverage="ambiguous". Never report high confidence for a number you are inferring rather than clearly reading.`;
   const userPrompt = `${buildRfxContext(rfx)}
 
 The attached image is this vendor's rate card. For each RFx line, report the price you can read from the photo, matching rows by their printed description.

@@ -429,12 +429,12 @@
     },
     {
       "qId": "q4",
-      "answer": "[object Object]",
+      "answer": null,
       "confidence": 0,
       "source": {
         "doc": "vendor4_rajdhani_ratecard_photo.jpg",
         "locationHint": "Compliance & Terms",
-        "snippet": "[object Object]"
+        "snippet": ""
       }
     }
   ],
